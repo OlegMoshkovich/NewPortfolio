@@ -7,6 +7,9 @@ app.use(express.static('public'));
 app.get('/', function(req, res){
   res.sendfile(__dirname + '/public/index.html');
 });
+app.get('/hclabs', function(req, res){
+  res.sendfile(__dirname + '/public/HCLabs.html');
+});
 
 // app.listen(3000, function () {
 //  console.log('Example app listening on port 3000!');
