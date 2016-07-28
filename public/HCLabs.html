@@ -36,55 +36,36 @@
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Somw <i class="	fa fa-circle-thin"></i>
-                </button>
-
-                <a class="navbar-brand page-scroll" href="#page-top">
-                     <!-- <span class="light">Oleg Moshkovich</span> -->
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="/">Home</a>
-                    </li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand page-scroll" href="/">
+                 <span class="light_1" class = "text-center" >work in progress</span>
+            </a>
 
 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+
+          </div>
+
+
+      </div>
+      <!-- /.container -->
+  </nav>
+
+
+
 
     <section id="HCLabs" >
-<br><br><br>
+<br><br><br><br>
 
 
 
 
-      <p class="col-lg-6 col-lg-offset-4">WORK IN PROGRESS</p>
+      <!-- <p class="col-lg-6 col-lg-offset-4">WORK IN PROGRESS</p> -->
 
-  <!-- <div class = 'center' id = 'trigger'><img src="/img/hc/HC_logo.png" width = 50px></img></a></div> -->
 
-  <form class = 'center' id = "edit" style="display: none;">
-          <input type="text" name = 'branch' placeholder = 'branch'>
-          <input type="text" name = 'node'   placeholder = 'node'>
-          <input type="text" name = 'link'   placeholder = 'link'>
-          <input type="submit" value="add">
-   </form>
+
 
 
 <script>
@@ -358,21 +339,11 @@ var treeData = [
           "parent": "Level 2: A",
           "url": "https://drive.google.com/drive/u/0/folders/0B1qONpvERdekOENLdEYtbmJSTUk",
     },
-
-
-    //         {
-    //       "name": "Cost + Schedule",
-    //       "parent": "Level 2: A",
-    //       "url": "https://drive.google.com/drive/u/0/folders/0B1qONpvERdekOENLdEYtbmJSTUk",
-    // },
-
            {
           "name": "Collaboration Folder",
           "parent": "Level 2: A",
           "url": "https://drive.google.com/drive/u/0/folders/0BzIbw7pJVkhdTTdfNXdsOUx5RHM",
     },
-
-
                  {
           "name": "Meeting Minutes",
           "parent": "Level 2: A",
@@ -479,7 +450,7 @@ var treeData = [
 
 
 // ************** Generate the tree diagram	 *****************
-var margin = {top: 20, right: 300, bottom: 20, left:300},
+var margin = {top: 20, right: 300, bottom: 20, left:150},
 width = 1200 - margin.right - margin.left,
 height = 500 - margin.top - margin.bottom;
 
@@ -622,51 +593,16 @@ update(root);
 
 </script>
 <!--D3 Script-->
-<script>
-              $(document).ready(function(){
-                  $('#trigger').on('click',function(){
-                      $( "#edit" ).toggle( "slow", function() {
-                      });
-                  });
-              });
-</script>
-<!-- Jquerry Script-->
-<script>
 
- $(document).ready(function(){
-$("#edit").on('submit',function(){
-
-
-
-               var formData = $(this).serialize();
-               alert(formData + "hello");
-              //mechanism that is responsible for posting location form data to the server
-              $.ajax({
-                type: 'POST',url: '/important', data: formData
-              }).done(function(inputData){
-                  alert(inputData);
-              });
-               event.preventDefault();
-               $('#edit').trigger("reset");
-              });
-
-
-
-
-              });
-
-</script>
-<!-- Ajax Script-->
 
 
 <!--Bottom links-->
 <!-- <a href="https://humanconditionglobal.atlassian.net/secure/Dashboard.jspa" target="_blank"><div class = 'center' ><font size="1" color="grey " >jira</font></div></a>
-
-<a href="https://calendar.google.com/calendar/render#main_7" target="_blank"><div class = 'center' ><font size="1" color="grey " >calendar</font></div></a>
+<!-- <a href="https://calendar.google.com/calendar/render#main_7" target="_blank"><div class = 'center' ><font size="1" color="grey " >calendar</font></div></a>
 <a href="https://app.asana.com/0/44369498078242/list" target="_blank"><div class = 'center' ><font size="1" color="grey " >tasks</font></div></a>
 <a href="https://www.moh.io/mohiomap/app.php#cn?Mohiomap&en?Google%7Croot&en?Google%7C0BwfKkj-6pO1gfk9va2pkQVpodnBZcVIzVzV3YXdFQkwxMmI0a09OMVI4WUZFblhtaFBTc2M&en?Google%7C0BwfKkj-6pO1gfnVFazJqeVpqbjA1YnNmbGREekw1eVBwdk9VdDRsWm42NmMzcEVscDVWUXM&en?Google%7C0B640nk3FrNfHR2dPZUllYVcwTGc&en?Google%7C0BwfKkj-6pO1gY09SNWpKLWxfaDQ&en?Google%7C0BzzxMkoHT-9nd242TzRBam1GVGM&en?Google%7C0BwfKkj-6pO1gfjlrMGtxS2xlZWNZVTA1XzE3QzIzLUdDclhlRUs0WWhtZFBqdThtUXBHb1E&en?Google%7C0B3WhQhojY6Udfk9vYmpCYVFJMkY3ZzFkdURZWnVQTkVYZ3dhd3FVTDNSTzA2VVVzbzR0TXM&en?Google%7C0B3wF6y4HqYwYR2IyQ0UwZjllTDA&en?Google%7C0BzzxMkoHT-9ncnNhQVB6ekltNDA&en?Google%7C0B-i6DGCOEzSCS1F0dHFXZHRsMW8" target="_blank"><div class = 'center' ><font size="1" color="grey " >data map</font></div></a>
 <a href="https://ide.c9.io/olegmoshkovich1/portfolio" target="_blank"><div class = 'center' ><font size="1" color="grey " >development</font></div></a>
-<!--<div class = 'center' id = 'trigger'><font size="1" color="grey " >edit</font></div> --> -->
+<!--<div class = 'center' id = 'trigger'><font size="1" color="grey " >edit</font></div> --> --> -->
 
 
 

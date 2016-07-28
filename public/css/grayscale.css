@@ -88,12 +88,21 @@ a:focus {
 .light {
   color: white;
   font-weight: bold;
-  font-size: 150%;
+  font-size: 260%;
+    line-height: 73%;
+}
+.light_1 {
+
+  /*margin-left: 110px;*/
+  color: #00ff00;
+  font-weight: bold;
+  font-size: 200%;
+    line-height: 73%;
 }
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-left: 20px;
+  margin-left: 0px;
   text-transform: uppercase;
   font-family: 'Karla', sans-serif;
   /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
@@ -103,7 +112,7 @@ a:focus {
 .navbar-custom .navbar-toggle {
   color: black;
   /*background-color: rgba(255, 255, 255, 0.2);*/
-  background-color: white;
+  background-color: #00ff00;
   font-size: 12px;
 }
 
@@ -122,8 +131,9 @@ a:focus {
 }
 .navbar-custom .nav li a {
   color: #00ff00;
-  font-size: 160%;
+  font-size: 190%;
   font-weight: bold;
+      line-height: 120%;
 
 
 
@@ -147,7 +157,8 @@ a:focus {
   outline: none;
 }
 .navbar-custom .nav li.active a {
-  background-color: white;
+  background-color: transparent;
+  color:white;
 }
 .navbar-custom .nav li.active a:hover {
   color: white;

@@ -14,6 +14,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -26,12 +28,198 @@
 <script src="js/d3/d3.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+
+
+
+
+<!-- FAncybox setup -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    /*
+     *  Simple image gallery. Uses default settings
+     */
+
+    $('.fancybox').fancybox();
+
+    /*
+     *  Different effects
+     */
+
+    // Change title type, overlay closing speed
+    $(".fancybox-effects-a").fancybox({
+      helpers: {
+        title : {
+          type : 'outside'
+        },
+        overlay : {
+          speedOut : 0
+        }
+      }
+    });
+
+    // Disable opening and closing animations, change title type
+    $(".fancybox-effects-b").fancybox({
+      openEffect  : 'none',
+      closeEffect	: 'none',
+
+      helpers : {
+        title : {
+          type : 'over'
+        }
+      }
+    });
+
+    // Set custom style, close if clicked, change title type and overlay color
+    $(".fancybox-effects-c").fancybox({
+      wrapCSS    : 'fancybox-custom',
+      closeClick : true,
+
+      openEffect : 'none',
+
+      helpers : {
+        title : {
+          type : 'inside'
+        },
+        overlay : {
+          css : {
+            'background' : 'rgba(238,238,238,0.85)'
+          }
+        }
+      }
+    });
+
+    // Remove padding, set opening and closing animations, close if clicked and disable overlay
+    $(".fancybox-effects-d").fancybox({
+      padding: 0,
+
+      openEffect : 'elastic',
+      openSpeed  : 150,
+
+      closeEffect : 'elastic',
+      closeSpeed  : 150,
+
+      closeClick : true,
+
+      helpers : {
+        overlay : null
+      }
+    });
+
+    /*
+     *  Button helper. Disable animations, hide close button, change title type and content
+     */
+
+    $('.fancybox-buttons').fancybox({
+      openEffect  : 'none',
+      closeEffect : 'none',
+
+      prevEffect : 'none',
+      nextEffect : 'none',
+
+      closeBtn  : false,
+
+      helpers : {
+        title : {
+          type : 'inside'
+        },
+        buttons	: {}
+      },
+
+      afterLoad : function() {
+        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+      }
+    });
+
+
+    /*
+     *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+     */
+
+    $('.fancybox-thumbs').fancybox({
+      prevEffect : 'none',
+      nextEffect : 'none',
+
+      closeBtn  : false,
+      arrows    : false,
+      nextClick : true,
+
+      helpers : {
+        thumbs : {
+          width  : 50,
+          height : 50
+        }
+      }
+    });
+
+    /*
+     *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+    */
+    $('.fancybox-media')
+      .attr('rel', 'media-gallery')
+      .fancybox({
+        openEffect : 'none',
+        closeEffect : 'none',
+        prevEffect : 'none',
+        nextEffect : 'none',
+
+        arrows : false,
+        helpers : {
+          media : {},
+          buttons : {}
+        }
+      });
+
+    /*
+     *  Open manually
+     */
+
+    $("#fancybox-manual-a").click(function() {
+      $.fancybox.open('1_b.jpg');
+    });
+
+    $("#fancybox-manual-b").click(function() {
+      $.fancybox.open({
+        href : 'iframe.html',
+        type : 'iframe',
+        padding : 5
+      });
+    });
+
+    $("#fancybox-manual-c").click(function() {
+      $.fancybox.open([
+        {
+          href : '1_b.jpg',
+          title : 'My title'
+        }, {
+          href : '2_b.jpg',
+          title : '2nd title'
+        }, {
+          href : '3_b.jpg'
+        }
+      ], {
+        helpers : {
+          thumbs : {
+            width: 75,
+            height: 50
+          }
+        }
+      });
+    });
+
+
+  });
+</script>
+<style type="text/css">
+  .fancybox-custom .fancybox-skin {
+    box-shadow: 0 0 50px #222;
+  }
+
+  /*body {
+    max-width: 700px;
+    margin: 0 auto;
+  }*/
+</style>
 
 </head>
 
@@ -41,13 +229,14 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
+              <a class="navbar-brand page-scroll" href="#page-top">
+                   <span class="light">Oleg Moshkovich</span>
+              </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                   <i class="fa fa-bars"></i>
+                   <!-- <i class="fa fa-bars"></i> -->
                 </button>
 
-                <a class="navbar-brand page-scroll" href="#page-top">
-                     <span class="light">Oleg Moshkovich</span>
-                </a>
+
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,11 +257,15 @@
                         <a class="page-scroll" href="#61B">61B</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/hclabs">HCLabs</a>
+                        <a class="page-scroll" href="/hclabs" >HCL</a>
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="https://www.amazon.com/Implementing-Virtual-Design-Construction-using/dp/1138019941/ref=sr_1_1?ie=UTF8&qid=1468333284&sr=8-1&keywords=virtual+design+and+construction" target="_blank">Book</a>
+                        <a class="page-scroll"  href="https://www.amazon.com/Implementing-Virtual-Design-Construction-using/dp/1138019941/ref=sr_1_1?ie=UTF8&qid=1468333284&sr=8-1&keywords=virtual+design+and+construction" target="_blank">Book</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll"  href="/story">STORY</a>
                     </li>
 
                 </ul>
@@ -108,7 +301,30 @@
     </section>
 
     <section id="esa" >
-              <img src="img/ESA_6.png" id="bg" width =100% alt="" />
+
+
+<div>
+              <a class="fancybox" href="img/ESA_6.png" data-fancybox-group="gallery" >    <img src="img/ESA_6.png" id="bg" width =100% alt="" /></a>
+              <a class="fancybox" href="img/ESA/ESA_1.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_0.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_2.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_3.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_4.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_5.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_6.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_7.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_8.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_9.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_10.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_11.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_12.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_13.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_14.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_15.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_16.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_17.png" data-fancybox-group="gallery" ></a>
+<div>
+
     </section>
 
     <section id="61B" >
@@ -133,7 +349,9 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="/vendor/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
