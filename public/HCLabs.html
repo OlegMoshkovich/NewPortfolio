@@ -499,7 +499,7 @@ var nodeEnter = node.enter().append("g")
 
 nodeEnter.append("circle")
   .attr("r", 1e-6)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#00ff00"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#6BFF00"; });
 
 nodeEnter.append("text")
   .attr("x", function(d) { return d.children || d._children ? -13 : 13; })
@@ -518,7 +518,7 @@ var nodeUpdate = node.transition()
 
 nodeUpdate.select("circle")
   .attr("r", 5)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#00ff00"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#6BFF00"; });
 
 nodeUpdate.select("text")
   .style("fill-opacity", 1);
