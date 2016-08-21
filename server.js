@@ -23,7 +23,11 @@ app.get('/fancy', function(req, res){
   res.sendfile(__dirname + '/public/index_1.html');
 });
 
-// app.listen(3000, function () {
+app.get('/daily', function(req, res){
+  res.sendfile(__dirname + '/public/dailiy.html');
+});
+
+// app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
 // });
 
