@@ -24,7 +24,7 @@ app.get('/fancy', function(req, res){
 });
 
 app.get('/daily', function(req, res){
-  res.sendfile(__dirname + '/public/dailiy.html');
+  res.sendfile(__dirname + '/public/daily.html');
 });
 
 // app.listen(5000, function () {
