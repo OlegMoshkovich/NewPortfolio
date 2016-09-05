@@ -94,7 +94,16 @@ a:focus {
 .light_1 {
 
   /*margin-left: 110px;*/
-  color: #6BFF00;
+  color: #FFA300;
+  font-weight: bold;
+  font-size: 200%;
+    line-height: 73%;
+}
+
+.products {
+
+  /*margin-left: 110px;*/
+  color: #FFD300;
   font-weight: bold;
   font-size: 200%;
     line-height: 73%;

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Oleg Moshkovich</title>
+    <title>Products</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
       <div class="container">
           <div class="navbar-header">
             <a class="navbar-brand page-scroll" href="/">
-                 <span class="light_1" class = "text-center" >Bookmark</span>
+                 <span class="products" class = "text-center" >Products</span>
             </a>
           </div>
       </div>
@@ -562,7 +562,7 @@ var nodeEnter = node.enter().append("g")
 
 nodeEnter.append("circle")
   .attr("r", 1e-6)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFA300"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFD300"; });
 
 nodeEnter.append("text")
   .attr("x", function(d) { return d.children || d._children ? -13 : 13; })
@@ -581,7 +581,7 @@ var nodeUpdate = node.transition()
 
 nodeUpdate.select("circle")
   .attr("r", 5)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFA300"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFD300"; });
 
 nodeUpdate.select("text")
   .style("fill-opacity", 1);
