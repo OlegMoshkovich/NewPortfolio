@@ -34,7 +34,7 @@
       <div class="container">
           <div class="navbar-header">
             <a class="navbar-brand page-scroll" href="/">
-                 <span class="light_1" class = "text-center" >Bookmark</span>
+                 <span class="light_1" class = "text-center" >Bookmark | work in progress</span>
             </a>
           </div>
       </div>
@@ -42,7 +42,7 @@
 
 
     <section id="HCLabs" >
-<br><br><br><br>
+<br><br><br><br><br><br>
 <script>
 
 
@@ -50,7 +50,7 @@ var treeData = [
 
 
 {
-  "name": "HCL",
+  "name": "HCLabs",
   "parent": "null",
   "url":"https://drive.google.com/drive/u/0/folders/0B640nk3FrNfHM3lJeXFELTVBc0k",
   "children": [
@@ -562,7 +562,7 @@ var nodeEnter = node.enter().append("g")
 
 nodeEnter.append("circle")
   .attr("r", 1e-6)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFA300"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFD300"; });
 
 nodeEnter.append("text")
   .attr("x", function(d) { return d.children || d._children ? -13 : 13; })
@@ -581,7 +581,7 @@ var nodeUpdate = node.transition()
 
 nodeUpdate.select("circle")
   .attr("r", 5)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFA300"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#FFD300"; });
 
 nodeUpdate.select("text")
   .style("fill-opacity", 1);
