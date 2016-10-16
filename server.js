@@ -7,6 +7,10 @@ app.use(express.static('public'));
 app.get('/', function(req, res){
   res.sendfile(__dirname + '/public/index.html');
 });
+
+app.get('/work', function(req, res){
+  res.sendfile(__dirname + '/public/work.html');
+});
 app.get('/hclabs', function(req, res){
   res.sendfile(__dirname + '/public/HCLabs.html');
 });
