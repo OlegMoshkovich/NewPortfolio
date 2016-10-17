@@ -94,7 +94,7 @@ a:focus {
 .light_1 {
 
   /*margin-left: 110px;*/
-  color: #FFD300;
+  color: #6BFF00;
   font-weight: bold;
   font-size: 200%;
     line-height: 73%;
@@ -205,7 +205,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-6.png) no-repeat bottom center scroll;
+  background: url(../img/intro-8.png) no-repeat bottom center scroll;
   background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
