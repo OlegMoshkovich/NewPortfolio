@@ -36,6 +36,10 @@ app.get('/products', function(req, res){
   res.sendfile(__dirname + '/public/products.html');
 });
 
+app.get('/Safety', function(req, res){
+  res.sendfile(__dirname + '/public/Safety.html');
+});
+
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
 // });
