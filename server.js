@@ -44,10 +44,25 @@ app.get('/UN', function(req, res){
   res.sendfile(__dirname + '/public/UN.html');
 });
 
-// app.listen(5000, function () {
-//  console.log('Example app listening on port 3000!');
-// });
+app.get('/vr-as', function(req, res){
+  res.sendfile(__dirname + '/public/VR-AS.html');
+});
+
+app.get('/wtc', function(req, res){
+  res.sendfile(__dirname + '/public/wtc.html');
+});
+
+app.get('/dgh', function(req, res){
+  res.sendfile(__dirname + '/public/dgh.html');
+});
+
+
+
+
+app.listen(5000, function () {
+ console.log('Example app listening on port 3000!');
+});
  //
- app.listen(process.env.PORT, process.env.IP, function(){
-   console.log(" I am listening on some port");
- });
+ // app.listen(process.env.PORT, process.env.IP, function(){
+ //   console.log(" I am listening on some port");
+ // });
