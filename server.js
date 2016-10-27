@@ -56,6 +56,18 @@ app.get('/dgh', function(req, res){
   res.sendfile(__dirname + '/public/dgh.html');
 });
 
+app.get('/esa', function(req, res){
+  res.sendfile(__dirname + '/public/esa.html');
+});
+
+app.get('/nasa', function(req, res){
+  res.sendfile(__dirname + '/public/nasa.html');
+});
+
+
+app.get('/ribbon', function(req, res){
+  res.sendfile(__dirname + '/public/ribbon.html');
+});
 
 
 
