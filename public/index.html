@@ -9,10 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Oleg Moshkovich</title>
+    <title>OM - Work</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -26,12 +28,198 @@
 <script src="js/d3/d3.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+
+
+
+
+<!-- FAncybox setup -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    /*
+     *  Simple image gallery. Uses default settings
+     */
+
+    $('.fancybox').fancybox();
+
+    /*
+     *  Different effects
+     */
+
+    // Change title type, overlay closing speed
+    $(".fancybox-effects-a").fancybox({
+      helpers: {
+        title : {
+          type : 'outside'
+        },
+        overlay : {
+          speedOut : 0
+        }
+      }
+    });
+
+    // Disable opening and closing animations, change title type
+    $(".fancybox-effects-b").fancybox({
+      openEffect  : 'none',
+      closeEffect	: 'none',
+
+      helpers : {
+        title : {
+          type : 'over'
+        }
+      }
+    });
+
+    // Set custom style, close if clicked, change title type and overlay color
+    $(".fancybox-effects-c").fancybox({
+      wrapCSS    : 'fancybox-custom',
+      closeClick : true,
+
+      openEffect : 'none',
+
+      helpers : {
+        title : {
+          type : 'inside'
+        },
+        overlay : {
+          css : {
+            'background' : 'rgba(238,238,238,0.85)'
+          }
+        }
+      }
+    });
+
+    // Remove padding, set opening and closing animations, close if clicked and disable overlay
+    $(".fancybox-effects-d").fancybox({
+      padding: 0,
+
+      openEffect : 'elastic',
+      openSpeed  : 150,
+
+      closeEffect : 'elastic',
+      closeSpeed  : 150,
+
+      closeClick : true,
+
+      helpers : {
+        overlay : null
+      }
+    });
+
+    /*
+     *  Button helper. Disable animations, hide close button, change title type and content
+     */
+
+    $('.fancybox-buttons').fancybox({
+      openEffect  : 'none',
+      closeEffect : 'none',
+
+      prevEffect : 'none',
+      nextEffect : 'none',
+
+      closeBtn  : false,
+
+      helpers : {
+        title : {
+          type : 'inside'
+        },
+        buttons	: {}
+      },
+
+      afterLoad : function() {
+        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+      }
+    });
+
+
+    /*
+     *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+     */
+
+    $('.fancybox-thumbs').fancybox({
+      prevEffect : 'none',
+      nextEffect : 'none',
+
+      closeBtn  : false,
+      arrows    : false,
+      nextClick : true,
+
+      helpers : {
+        thumbs : {
+          width  : 50,
+          height : 50
+        }
+      }
+    });
+
+    /*
+     *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+    */
+    $('.fancybox-media')
+      .attr('rel', 'media-gallery')
+      .fancybox({
+        openEffect : 'none',
+        closeEffect : 'none',
+        prevEffect : 'none',
+        nextEffect : 'none',
+
+        arrows : false,
+        helpers : {
+          media : {},
+          buttons : {}
+        }
+      });
+
+    /*
+     *  Open manually
+     */
+
+    $("#fancybox-manual-a").click(function() {
+      $.fancybox.open('1_b.jpg');
+    });
+
+    $("#fancybox-manual-b").click(function() {
+      $.fancybox.open({
+        href : 'iframe.html',
+        type : 'iframe',
+        padding : 5
+      });
+    });
+
+    $("#fancybox-manual-c").click(function() {
+      $.fancybox.open([
+        {
+          href : '1_b.jpg',
+          title : 'My title'
+        }, {
+          href : '2_b.jpg',
+          title : '2nd title'
+        }, {
+          href : '3_b.jpg'
+        }
+      ], {
+        helpers : {
+          thumbs : {
+            width: 75,
+            height: 50
+          }
+        }
+      });
+    });
+
+
+  });
+</script>
+<style type="text/css">
+  .fancybox-custom .fancybox-skin {
+    box-shadow: 0 0 50px #222;
+  }
+
+  /*body {
+    max-width: 700px;
+    margin: 0 auto;
+  }*/
+</style>
 
 </head>
 
@@ -46,6 +234,9 @@
               </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                    <!-- <i class="fa fa-bars"></i> -->
+
+
+
                 </button>
 
 
@@ -55,35 +246,58 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden" >
+                    <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
 
                     <!-- <li>
-                        <a class="page-scroll" style="background-color:white;" href="/experience">EXPERIENCE</a>
+                        <a class="page-scroll" href="#ribbon">RIBBON</a>
                     </li> -->
+                    <li>
+                        <a class="page-scroll" href="#geometry">geometry</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#esa">ecosystem</a>
+                    </li>
 
                     <li>
-                        <a class="page-scroll" style="background-color:white;" href="/work">WORK</a>
+                        <a class="page-scroll" href="#61B">process</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projects">projects</a>
                     </li>
                     <!-- <li>
-                        <a class="page-scroll" href="/#esa">ESA</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/#61B">61B</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/hclabs">HCL</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="https://www.amazon.com/Implementing-Virtual-Design-Construction-using/dp/1138019941/ref=sr_1_1?ie=UTF8&qid=1468333284&sr=8-1&keywords=virtual+design+and+construction" target="_blank">Book</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="/story">STORY</a>
+                        <a class="page-scroll" href="/safety" >safety</a>
                     </li> -->
 
+                    <!-- <li>
+                        <a class="page-scroll" href="/directory" >directory</a>
+                    </li> -->
+
+
+
+                    <!-- <li>
+                        <a class="page-scroll" href="/products" >Products</a>
+                    </li> -->
+
+
+                    <li>
+                        <a class="page-scroll"  href="https://www.amazon.com/-/e/B01EGJXUPW" target="_blank">Book</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll"  href="/story">Story</a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll"  href="/experience">Notes</a>
+                    </li> -->
+
+                    <!-- <li>
+                        <a class="page-scroll" href="/daily" >Notes</a>
+                    </li> -->
+
+                    <!-- <li>
+                        <a class="page-scroll"  href="#hi">hi</a>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -91,65 +305,213 @@
         <!-- /.container -->
     </nav>
 
-
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- About Section -->
-    <section id="1" >
-      <a class="page-scroll" href="#2">
-              <img src="img/daily/Daily_2-01.png" id="bg" width =100% alt="" /></a>
+    <section id="geometry" >
+        <!-- <div class="row"> -->
+            <!-- <div class="col-lg-8 col-lg-offset-2"> -->
+              <img src="img/ribbon-02.png" id="bg" width =100% alt="" />
+                <!-- <h2>About Grayscale</h2> -->
+                <!-- <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p> -->
+            <!-- </div> -->
+        <!-- </div> -->
     </section>
 
-    <section id="2" >
-      <a class="page-scroll" href="#3">
-              <img src="img/daily/Daily_1-01.png" id="bg" width =100% alt="" /></a>
+    <section id="esa" >
+
+
+<div>
+              <a class="fancybox" href="img/ESA_6.png" data-fancybox-group="gallery" >    <img src="img/ESA_6.png" id="bg" width =100% alt="" /></a>
+              <a class="fancybox" href="img/ESA/ESA_1.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_0.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_2.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_3.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_4.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_5.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_6.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_7.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_8.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_9.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_10.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_11.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_12.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_13.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_14.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_15.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_16.png" data-fancybox-group="gallery" ></a>
+              <a class="fancybox" href="img/ESA/ESA_17.png" data-fancybox-group="gallery" ></a>
+<div>
+
     </section>
 
+    <section id="61B" >
+              <img src="img/61B-04.png" id="bg" width =100% alt="" />
+    </section>
+
+    <section id="projects">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
 
-    <!-- <section id="3" >
-              <img src="img/daily/Daily_3.png" id="bg" width =100% alt="" />
+        <div class="container text-center">
+          <a href="/safety" >
+            <img src="img/Safety.png"  width=43% >
+              <!-- <span class="fa fa-linkedin"></span> -->
+            </a>
+        </div>
+
+        <div class="container text-center">
+
+          <a href="/un" >
+            <img src="img/UN.png"  width=30%  >
+              <!-- <span class="fa fa-linkedin"></span> -->
+            </a>
+        </div>
+
+        <div class="container text-center">
+
+          <a href="/VR-AS" >
+            <img src="img/VR-AS/VR-AS.png"   width=36%  >
+              <!-- <span class="fa fa-linkedin"></span> -->
+            </a>
+        </div>
+
+        <div class="container text-center">
+              <a href="/dgh" >
+                <img src="img/LC-DGH/LC-DGH.png"   width=47% >
+                  <!-- <span class="fa fa-linkedin"></span> -->
+                </a>
+        </div>
+
+        <div class="container text-center">
+              <a href="/esa" >
+
+                <img src="img/ESA/ESA.png"   width=48%  >
+
+                </a>
+        </div>
+
+
+
+        <div class="container text-center"  >
+                <a href="/wtc" >
+                  <img src="img/WTC/WTC.png"   width=46%  >
+                    <!-- <span class="fa fa-linkedin"></span> -->
+                  </a>
+        </div>
+
+        <div class="container text-center">
+              <a href="/nasa" >
+
+                <img src="img/nasa.png"   width=44%  >
+
+                </a>
+        </div>
+
+        <div class="container text-center">
+              <a href="/ribbon" >
+
+                <img src="img/zhuhai/ribbon.png"   width=45%  >
+
+                </a>
+        </div>
+
+        <div class="container text-center">
+              <a href="" >
+
+                <img src="img/W/W.png"   width=27%  >
+
+                </a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        </section>
+
+
+    <!-- <section id="safety" >
+              <img src="img/Safety - Ecosystem.png" id="bg" width =100% alt="" />
     </section> -->
 
-    <section id="3" >
-      <a class="page-scroll" href="#4">
-              <img src="img/daily/Daily_4-01.png" id="bg" width =100% alt="" /></a>
-    </section>
+<!-- bootstrap carousel -->
+  <!-- <section id="hi" >
+      </section>
 
-    <section id="4" >
-      <a class="page-scroll" href="#5">
-              <img src="img/daily/Daily_5-01.png" id="bg" width =100% alt="" /></a>
-    </section>
+    <div class="container fill">
 
-    <section id="5" >
-      <a class="page-scroll" href="#1">
-              <img src="img/daily/Daily_6-01.png" id="bg" width =100% alt="" /></a>
-    </section>
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="active item">
+          <div class="fill" style="background-image:url('/img/test_2.png');">
+            <div class="container">
 
-    <!-- <section id="7" >
-              <img src="img/daily/Daily_7.png" id="bg" width =100% alt="" />
-    </section> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="fill" style="background-image:url('/img/ESA/ESA_1.png');">
+            <div class="container">
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="fill" style="background-image:url('/img/ESA/ESA_2.png');">
+            <div class="container">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="pull-center">
+    	<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span></a>
+    	<a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+   </a>
+
+      </div>
+    </div>
+    </div> -->
 
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-
-
-          <a class= "btn btn-social-icon btn-lg btn-twitter" href="https://twitter.com/olegmoshkovich" target="_blank">
-              <span class="fa fa-twitter"></span>
+          <a class= "btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/oleg-moshkovich-950b4b13" target="_blank">
+              <span class="fa fa-linkedin"></span>
             </a>
-
-            <!-- <a class= "btn btn-social-icon btn-lg btn-vimeo" href="https://vimeo.com/user2159507" target="_blank">
-                <span class="fa fa-vimeo"></span>
-              </a> -->
-
-
-
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="/vendor/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
