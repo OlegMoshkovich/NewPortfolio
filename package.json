@@ -25,6 +25,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "rangeslider.js": "^2.2.1"
   }
 }

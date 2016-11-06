@@ -1,9 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.static('public'));
-// app.get('/', function (req, res) {
-//   res.send('Hello World!');
-// });
+
 app.get('/', function(req, res){
   res.sendfile(__dirname + '/public/index.html');
 });
@@ -71,6 +69,10 @@ app.get('/nasa', function(req, res){
 
 app.get('/ribbon', function(req, res){
   res.sendfile(__dirname + '/public/ribbon.html');
+});
+
+app.get('/w', function(req, res){
+  res.sendfile(__dirname + '/public/W.html');
 });
 
 
