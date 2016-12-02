@@ -80,6 +80,14 @@ app.get('/control', function(req, res){
   res.sendfile(__dirname + '/public/control.html');
 });
 
+app.get('/react', function(req, res){
+  res.sendfile(__dirname + '/public/react.html');
+});
+
+app.get('/network', function(req, res){
+  res.sendfile(__dirname + '/public/network.html');
+});
+
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
 // });

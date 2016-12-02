@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "express": "^4.14.0",
-    "rangeslider.js": "^2.2.1"
+    "rangeslider.js": "^2.2.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   }
 }

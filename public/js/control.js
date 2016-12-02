@@ -19,14 +19,11 @@ div.setAttribute("id", "new");
 document.getElementById("main").appendChild(div);
 
 function mouseOver(){
- document.getElementById(id).style.background = "yellow";
+ // document.getElementById(id).style.background = "yellow";
  document.getElementById(id).innerHTML = "Move"
-r = Math.random();
+ r = Math.random();
  var w = r*1000;
- // var v = r*1000;
-  position(w,h);
-
-
+ position(w,h);
 }
 
 function mouseOut(){
