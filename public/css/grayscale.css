@@ -165,10 +165,12 @@ a:focus {
   color: white;
 }
 .navbar-custom .nav li a {
-  color: #6BFF00;
-  font-size: 150%;
+  color:#f6f6f6;
+   letter-spacing: .001px;
+    /*color: black;*/
+  font-size: 700%;
   font-weight: bold;
-      line-height: 150%;
+      line-height: 100%;
 
 
 
@@ -178,7 +180,7 @@ a:focus {
   transition: background 0.3s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
-  color: white;
+  color: #FFF600;
 
   outline: none;
   background-color: transparent;
