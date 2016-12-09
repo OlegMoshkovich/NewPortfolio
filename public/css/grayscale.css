@@ -38,13 +38,18 @@
  }
  .node text {
    font: 15px sans-serif;
-   font-family: 'Karla', sans-serif;
+   font-family: 'Helvetica', sans-serif;
    text-transform: uppercase;
+
+
+
+
  }
  .link {
    fill: none;
    stroke: #ccc;
    stroke-width: 1.5px;
+
  }
 
 body {
