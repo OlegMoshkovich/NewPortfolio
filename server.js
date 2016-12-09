@@ -88,12 +88,12 @@ app.get('/network', function(req, res){
   res.sendfile(__dirname + '/public/network.html');
 });
 
-app.get('/hcsafety', function(req, res){
-  res.sendfile(__dirname + '/public/hcsafety.html');
-});
+// app.get('/hcsafety', function(req, res){
+//   res.sendfile(__dirname + '/public/hcsafety.html');
+// });
 
-app.get('/hcsafety1', function(req, res){
-  res.sendfile(__dirname + '/public/hcsafety.html');
+app.get('/hcs', function(req, res){
+  res.sendfile(__dirname + '/public/directorysafety.html');
 });
 
 
