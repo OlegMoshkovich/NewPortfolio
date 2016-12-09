@@ -92,6 +92,11 @@ app.get('/hcsafety', function(req, res){
   res.sendfile(__dirname + '/public/hcsafety.html');
 });
 
+app.get('/hcsafety1', function(req, res){
+  res.sendfile(__dirname + '/public/hcsafety.html');
+});
+
+
 
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
