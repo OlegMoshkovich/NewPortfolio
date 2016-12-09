@@ -139,8 +139,8 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-left: 0px;
   text-transform: uppercase;
-  font-family: 'Karla', sans-serif;
-  /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: 'Karla', sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: transparent;
 }
 
@@ -166,7 +166,7 @@ a:focus {
 }
 .navbar-custom .nav li a {
   color:#f6f6f6;
-   letter-spacing: .001px;
+   letter-spacing: -.05em;
     /*color: black;*/
   font-size: 700%;
   font-weight: bold;
