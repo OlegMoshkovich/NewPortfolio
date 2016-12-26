@@ -96,6 +96,10 @@ app.get('/hcs', function(req, res){
   res.sendfile(__dirname + '/public/directorysafety.html');
 });
 
+app.get('/israel', function(req, res){
+  res.sendfile(__dirname + '/public/israel.html');
+});
+
 
 
 // app.listen(5000, function () {
