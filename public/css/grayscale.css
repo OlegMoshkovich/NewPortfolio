@@ -10,7 +10,7 @@
  z-index: 5;
  display: inline-block;
  }
- 
+
  html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
@@ -87,6 +87,7 @@ body {
   /*font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: white;
   background-color: white;
+  
 }
 
 
