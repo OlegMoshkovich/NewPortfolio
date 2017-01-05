@@ -100,6 +100,10 @@ app.get('/israel', function(req, res){
   res.sendfile(__dirname + '/public/israel.html');
 });
 
+app.get('/61b', function(req, res){
+  res.sendfile(__dirname + '/public/61b.html');
+});
+
 
 
 // app.listen(5000, function () {
