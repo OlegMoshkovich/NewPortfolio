@@ -17,9 +17,9 @@ app.get('/story', function(req, res){
   res.sendfile(__dirname + '/public/story.html');
 });
 
-app.get('/experience', function(req, res){
-  res.sendfile(__dirname + '/public/experience.html');
-});
+// app.get('/experience', function(req, res){
+//   res.sendfile(__dirname + '/public/experience.html');
+// });
 
 app.get('/fancy', function(req, res){
   res.sendfile(__dirname + '/public/index_1.html');
@@ -107,12 +107,16 @@ app.get('/61b', function(req, res){
   res.sendfile(__dirname + '/public/61b.html');
 });
 
+app.get('/love', function(req, res){
+  res.sendfile(__dirname + '/public/love.html');
+});
 
 
-// app.listen(5000, function () {
-//  console.log('Example app listening on port 3000!');
-// });
 
- app.listen(process.env.PORT, process.env.IP, function(){
-   console.log(" I am listening on some port");
- });
+app.listen(5000, function () {
+ console.log('Example app listening on port 3000!');
+});
+
+ // app.listen(process.env.PORT, process.env.IP, function(){
+ //   console.log(" I am listening on some port");
+ // });
