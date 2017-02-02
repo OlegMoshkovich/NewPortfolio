@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>line...</title>
+    <title>Grain and Vine</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +28,7 @@
 
 
 <style>
+
 .love {
 
 font-weight: bold;
@@ -35,14 +36,18 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 color: #111111;
 
 letter-spacing: -0.04em;
-font-size: 82px;
-line-height: 300px;}
+font-size: 200px;
+line-height: 250px;}
 
+
+::-webkit-input-placeholder { /* Chrome */
+  color: black;
+}
 .click {
 
 font-weight: bold;
 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-color: #111111;
+color: black;
 
 letter-spacing: -0.04em;
 font-size: 40px;
@@ -52,8 +57,10 @@ text-align: center;}
 .block {
   height: 800px;
   text-align: center;
-  background: white;
-  margin: 20px;
+  background: #636669;
+  /*background: #636669;*/
+  /*change the outer border*/
+  margin: 10px;
 }
 
 .block:before {
@@ -67,10 +74,13 @@ text-align: center;}
 .centered {
   display: inline-block;
   vertical-align: middle;
-  width: 800px;
-  padding: 10px 15px;
-  background: white;
+  width: 1400px;
+  padding: 5px 5px;
+  /*change this line for the letter line*/
+  background:white;
 }
+
+
 input[type=text] {
     width: 50%;
     padding: 10px 10px;
@@ -90,7 +100,7 @@ input[type=submit] {
 }
 
 #content{
-  display:none;
+  /*display:none;*/
 }
 #content.show{
   display:block; /* P.S: Use `!important` if missing `#content` (selector specificity). */
@@ -101,45 +111,79 @@ input[type=submit] {
 
 
 <br>
-<div class = 'click' id="toggle"><img src="/img/circle.png" style="width:3%"/></div>
-
+<!-- <div class = 'click' id="toggle"><img src="/img/circle.png" style="width:3%"/></div> -->
+  <section id="question" >
 <div class="click" id="content">
   <form>
     <!-- <label><b>Enter a Message</b></label> -->
-    <input type="text" name="message" id="user_input">
+    <input type="text" name="message"placeholder="say something about love... " id="user_input">
 
   </form>
-   <input type="submit"  value="submit" onclick="showInput();" id = "div"><br/>
+   <!-- <input type="submit"  value="submit" onclick="showInput();" id = "div"><br/> -->
+     <a class="page-scroll" href="#intro">
+       <input type="image" src="/img/circle.png" onclick="showInput();" width = "2%" id = "div">
+</a>
    </div>
+  </section>
 
+
+  <section id="intro" >
 <div class="block">
     <div class="centered">
-<marquee behavior="scroll" direction="left" class = 'love' >
-  <span id='display'>Love</span>
+      <a class="page-scroll" href="#question">
+<marquee behavior="scroll" direction="left" class = 'love' scrollamount="10" >
+  </a>
+  <span id='display' >love</span>
 </marquee>
-
-
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+
+
+<!-- <div class = "click">
+<a class="page-scroll" href="#question">
+  <img src="img/circle.png" id="bg" width = 5% alt="" /></a>
+</a>
+</div> -->
+
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  </section>
 <!-- <div id="toggle">.</div> -->
 
 
