@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,8 +11,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -27,200 +23,6 @@
 <link rel="shortcut icon" href="img/favicon-square.png" type="image/x-icon">
 <script src="js/d3/d3.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-
-
-
-
-
-<!-- FAncybox setup -->
-<script type="text/javascript">
-  $(document).ready(function() {
-    /*
-     *  Simple image gallery. Uses default settings
-     */
-
-    $('.fancybox').fancybox();
-
-    /*
-     *  Different effects
-     */
-
-    // Change title type, overlay closing speed
-    $(".fancybox-effects-a").fancybox({
-      helpers: {
-        title : {
-          type : 'outside'
-        },
-        overlay : {
-          speedOut : 0
-        }
-      }
-    });
-
-    // Disable opening and closing animations, change title type
-    $(".fancybox-effects-b").fancybox({
-      openEffect  : 'none',
-      closeEffect	: 'none',
-
-      helpers : {
-        title : {
-          type : 'over'
-        }
-      }
-    });
-
-    // Set custom style, close if clicked, change title type and overlay color
-    $(".fancybox-effects-c").fancybox({
-      wrapCSS    : 'fancybox-custom',
-      closeClick : true,
-
-      openEffect : 'none',
-
-      helpers : {
-        title : {
-          type : 'inside'
-        },
-        overlay : {
-          css : {
-            'background' : 'rgba(238,238,238,0.85)'
-          }
-        }
-      }
-    });
-
-    // Remove padding, set opening and closing animations, close if clicked and disable overlay
-    $(".fancybox-effects-d").fancybox({
-      padding: 0,
-
-      openEffect : 'elastic',
-      openSpeed  : 150,
-
-      closeEffect : 'elastic',
-      closeSpeed  : 150,
-
-      closeClick : true,
-
-      helpers : {
-        overlay : null
-      }
-    });
-
-    /*
-     *  Button helper. Disable animations, hide close button, change title type and content
-     */
-
-    $('.fancybox-buttons').fancybox({
-      openEffect  : 'none',
-      closeEffect : 'none',
-
-      prevEffect : 'none',
-      nextEffect : 'none',
-
-      closeBtn  : false,
-
-      helpers : {
-        title : {
-          type : 'inside'
-        },
-        buttons	: {}
-      },
-
-      afterLoad : function() {
-        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-      }
-    });
-
-
-    /*
-     *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
-     */
-
-    $('.fancybox-thumbs').fancybox({
-      prevEffect : 'none',
-      nextEffect : 'none',
-
-      closeBtn  : false,
-      arrows    : false,
-      nextClick : true,
-
-      helpers : {
-        thumbs : {
-          width  : 50,
-          height : 50
-        }
-      }
-    });
-
-    /*
-     *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
-    */
-    $('.fancybox-media')
-      .attr('rel', 'media-gallery')
-      .fancybox({
-        openEffect : 'none',
-        closeEffect : 'none',
-        prevEffect : 'none',
-        nextEffect : 'none',
-
-        arrows : false,
-        helpers : {
-          media : {},
-          buttons : {}
-        }
-      });
-
-    /*
-     *  Open manually
-     */
-
-    $("#fancybox-manual-a").click(function() {
-      $.fancybox.open('1_b.jpg');
-    });
-
-    $("#fancybox-manual-b").click(function() {
-      $.fancybox.open({
-        href : 'iframe.html',
-        type : 'iframe',
-        padding : 5
-      });
-    });
-
-    $("#fancybox-manual-c").click(function() {
-      $.fancybox.open([
-        {
-          href : '1_b.jpg',
-          title : 'My title'
-        }, {
-          href : '2_b.jpg',
-          title : '2nd title'
-        }, {
-          href : '3_b.jpg'
-        }
-      ], {
-        helpers : {
-          thumbs : {
-            width: 75,
-            height: 50
-          }
-        }
-      });
-    });
-
-
-  });
-</script>
-<style type="text/css">
-  .fancybox-custom .fancybox-skin {
-    box-shadow: 0 0 50px #222;
-  }
-
-  /*body {
-    max-width: 700px;
-    margin: 0 auto;
-  }*/
-</style>
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -240,24 +42,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-
-                      <!-- <li>
-                        <a class="page-scroll"  href="#geometry">GEOMETRY</a>
-                    </li>
-
-
-                    <li>
-                        <a class="page-scroll" href="#61B">PROCESS</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="#esa">SYSTEM</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="#platform">PLATFORM</a>
-                    </li> -->
-
                     <li>
                         <a class="page-scroll" href="#projects">PROJECTS</a>
                     </li>
@@ -265,15 +49,11 @@
                     <li>
                         <a class="page-scroll"  href="#publication">BOOK</a>
                     </li>
+
                     <li>
                         <a class="page-scroll"  href="/directory">DIRECTORY</a>
+
                     </li>
-                    <!-- <li>
-                        <a class="page-scroll"  href="/daily">NOTES</a>
-                    </li> -->
-
-
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -283,85 +63,11 @@
 
 
     <section id="intro" >
-              <!-- <a href="#in" > -->
-
               <img src="img/intro-20-01.png" id="bg" width =100% alt="" />
-
-            <!-- </a> -->
     </section>
 
 
-
-    <!-- About Section -->
-    <!-- <section id="geometry" >
-      <a href="/ribbon" >
-              <img src="img/ribbon-02.png" id="bg" width =100% alt="" />
-      </a>
-    </section> -->
-
-
-
-    <!-- <section id="61B" >
-        <a href="/61b" >
-              <img src="img/61B-04.png" id="bg" width =100% alt="" />
-              </a>
-    </section> -->
-
-    <!-- <section id="esa" >
-      <a href="/esa" >
-      <img src="img/ESA_6.png" id="bg" width =100% alt="" />
-</a> -->
-
-<div class="container text-center">
-    <!-- About Section -->
-
-    <!-- <section id="platform" >
-      <a class="page-scroll" href="#1">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a href="/safety" >
-              <img src="img/platform.png" id="bg" width =70% alt="" style="border-style: solid;"/></a>
-          </a>
-    </section>
-
-      </section> -->
-
-
-
-              <!-- <a class="fancybox" href="img/ESA_6.png" data-fancybox-group="gallery" >
-              <img src="img/ESA_6.png" id="bg" width =100% alt="" /></a>
-              <a class="fancybox" href="img/ESA/ESA_1.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_0.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_2.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_3.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_4.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_5.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_6.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_7.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_8.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_9.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_10.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_11.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_12.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_13.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_14.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_15.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_16.png" data-fancybox-group="gallery" ></a>
-              <a class="fancybox" href="img/ESA/ESA_17.png" data-fancybox-group="gallery" ></a> -->
-
-
-
-
-
-
-
-
-
-
+    <div class="container text-center">
     <section id="projects">
       <br>
       <br>
@@ -370,122 +76,117 @@
       <br>
       <br>
       <br>
-
-
-        <!-- <div class="container text-center">
-          <a href="/safety" >
-            <img src="img/Safety.png"  width=47% >
-              <!-- <span class="fa fa-linkedin"></span> -->
-            </a>
-        </div>
-
+      <br>
+      <br>
+      <br>
         <div class="container text-center"  >
                 <a href="/wtc" >
-                  <img src="img/WTC/WTC.png"   width=50%  >
-                    <!-- <span class="fa fa-linkedin"></span> -->
-                  </a>
+                  <div id="project">
+                    World Trade Center Program
+                  </div>
+                </a>
+        </div>
+
+        <div class="container text-center">
+              <a href="/dgh" >
+                <div id="project">
+                  New York Philharmonic
+                </div>
+              </a>
         </div>
 
         <div class="container text-center">
               <a href="/esa" >
+                <div id="project">
+                  Grand Central Terminal
+                </div>
+              </a>
+        </div>
 
-                <img src="img/ESA/ESA.png"   width=54%  >
+        <br>
 
+        <div class="container text-center">
+              <a href="/61B" >
+                <div id="project">
+                  Studio
+                </div>
                 </a>
         </div>
 
+        <div class="container text-center">
+              <a href="/cabin" >
+                <div id="project">
+                  Escape
+                </div>
+                </a>
+        </div>
 
+        <br>
 
+        <div class="container text-center">
+              <a href="/ribbon" >
+                <div id="project">
+                  Urban Monster -- China
+                </div>
+                </a>
+        </div>
 
 
         <div class="container text-center">
-              <a href="/dgh" >
-                <img src="img/LC-DGH/LC-DGH.png"   width=55% >
-                  <!-- <span class="fa fa-linkedin"></span> -->
+              <a href="/pilot" >
+                <div id="project">
+                  Simulation Environment -- Pilot
+                </div>
                 </a>
         </div>
 
-        <!-- <div class="container text-center">
-              <a href="/nasa" >
-
-                <img src="img/nasa.png"   width=44%  >
-
+        <div class="container text-center">
+              <a href="/projects" >
+                <div id="project">
+                  ...
+                </div>
                 </a>
-        </div> -->
-
-
-        <!-- <div class="container text-center">
-              <a href="/ribbon" >
-                <img src="img/zhuhai/ribbon.png"   width=45%  >
-                </a>
-        </div> -->
-
-        <!-- <div class="container text-center">
-              <a href="/harold" >
-
-                <img src="img/Harold/Harold - Infrastructure.png"   width=55%  >
-
-                </a>
-        </div> -->
-
-        <!-- <div class="container text-center">
-
-          <a href="/un" >
-            <img src="img/UN.png"  width=54%  >
-              <!-- <span class="fa fa-linkedin"></span> -->
-            </a>
-
         </div>
 
-
-
-        <br>
-        <br>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+  </div>
     </section>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
         <section id="publication" >
           <br>
-
-
-
-          <div class=" text-center" id="publication" >
+          <div class="text-center" id="publication" >
             <a href="https://www.amazon.com/Oleg-Moshkovich/e/B01EGJXUPW" target="_blank" >
                   <img src="img/publication_BW.png" id="bg" width = 80% alt="" />
             </a>
-
           </div>
         </section>
 
-
-
-    <section id="in">
 
 
     <footer>
@@ -495,7 +196,7 @@
             </a>
         </div>
     </footer>
-    </section>
+
     <!-- jQuery -->
         <script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
     <link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
@@ -511,7 +212,7 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+    <script src="js/grayscale.js"></script>
 
 </body>
 

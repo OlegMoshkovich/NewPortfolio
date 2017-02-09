@@ -1,14 +1,4 @@
-// $(document).scroll(function(){
-//  var targetOffset = $("#anchor-point").offset().top;
 
-// var $w = $(window).scroll(function(){
-//     if ( $w.scrollTop() > 200 ) {
-//         $('.navbar-custom').css({"font-size: 100%;"});
-//       //  $('#voice3').css({"border-bottom":"2px solid #2e375b"});
-//     } else {
-//       // ...
-//     }
-// });
 $(function() {
   $('#geometry').click(function() {
     alert( "I am clicked");
@@ -20,13 +10,13 @@ $(function() {
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+    // $('a.page-scroll').bind('click', function(event) {
+    //     var $anchor = $(this);
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top
+    //     }, 1500, 'easeInOutExpo');
+    //     event.preventDefault();
+    // });
 });
 
 // Closes the Responsive Menu on Menu Item Click

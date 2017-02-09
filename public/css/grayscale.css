@@ -91,6 +91,18 @@ html {
 	  /*padding-top: 10px; */
 }
 
+#project{
+  margin-bottom: 0;
+  font-size: 200%;
+  margin-left: 0px;
+  text-transform: uppercase;
+  font-family:  "Geometric Regular",sans-serif;
+  background-color: transparent;
+  color: #2A2A2A;
+      line-height: 4.5rem;
+  letter-spacing: -.03em;
+}
+
 
 /*this is important for collpsed nav bar*/
 .navbar-custom .navbar-toggle {
@@ -112,12 +124,15 @@ html {
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
+
 .navbar-custom .nav li a:hover {
   /*color: #FFF600;*/
 	color:#f6f6f6;
   outline: none;
   background-color: transparent;
 }
+
+
 
 
 .navbar-custom .nav li.active a {
