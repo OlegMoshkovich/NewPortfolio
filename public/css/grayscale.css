@@ -100,7 +100,12 @@ html {
   background-color: transparent;
   color: #2A2A2A;
       line-height: 4.5rem;
-  letter-spacing: -.03em;
+  /*letter-spacing: -.03em;*/
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*color: #111111;*/
+  font-weight: bold;
+
+  letter-spacing: -0.04em;
 }
 
 #element{
@@ -118,8 +123,8 @@ html {
   transform: translateY(-50%);
 }
 #projects{
-padding-top: 260px;
-padding-bottom: 100px;
+padding-top: 200px;
+padding-bottom: 230px;
 }
 #publication{
 padding-top: 30px;
@@ -128,7 +133,8 @@ padding-top: 30px;
 
 /*this is important for collpsed nav bar*/
 .navbar-custom .navbar-toggle {
-  background-color: #00ff00;
+  /*background-color: #00ff00;*/
+  background-color: white;
   font-size: 12px;
 }
 
@@ -136,8 +142,9 @@ padding-top: 30px;
 
 .navbar-custom  li a {
   /*color:#f6f6f6;*/
-  color:#f6f6f6;
+  /*color:#f6f6f6;*/
 	  color: #96928f;
+
   letter-spacing: -.05em;
 
   /*font-weight: bold;*/
@@ -149,7 +156,8 @@ padding-top: 30px;
 
 .navbar-custom .nav li a:hover {
   /*color: #FFF600;*/
-	color:#f6f6f6;
+	/*color:#f6f6f6;*/
+    color: #96928f;
   outline: none;
   background-color: transparent;
 }
@@ -159,10 +167,12 @@ padding-top: 30px;
 
 .navbar-custom .nav li.active a {
   background-color: transparent;
-  color:white;
+  /*color:#f6f6f6;*/
+    color: #96928f;
 }
 .navbar-custom .nav li.active a:hover {
-  color: white;
+  /*color: #f6f6f6;*/
+    color: #96928f;
 }
 
 
