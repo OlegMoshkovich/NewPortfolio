@@ -103,6 +103,28 @@ html {
   letter-spacing: -.03em;
 }
 
+#element{
+  margin-bottom: 0;
+  font-size: 100%;
+  margin-left: 0px;
+  /*text-transform: uppercase;*/
+  font-family:  "Geometric Regular",sans-serif;
+  background-color: transparent;
+  color: #2A2A2A;
+      line-height: 4.5rem;
+  letter-spacing: -.03em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#projects{
+padding-top: 260px;
+padding-bottom: 100px;
+}
+#publication{
+padding-top: 30px;
+}
+
 
 /*this is important for collpsed nav bar*/
 .navbar-custom .navbar-toggle {
