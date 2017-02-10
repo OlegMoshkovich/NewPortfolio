@@ -122,12 +122,12 @@ html {
   top: 50%;
   transform: translateY(-50%);
 }
-#projects{
+/*#projects{
 padding-top: 200px;
 padding-bottom: 230px;
-}
+}*/
 #publication{
-padding-top: 30px;
+/*padding-top: 30px;*/
 }
 
 
@@ -143,8 +143,8 @@ padding-top: 30px;
 .navbar-custom  li a {
   /*color:#f6f6f6;*/
   /*color:#f6f6f6;*/
-	  color: #96928f;
-
+	  /*color: #96928f;*/
+color: white;
   letter-spacing: -.05em;
 
   /*font-weight: bold;*/
