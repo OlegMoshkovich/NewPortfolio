@@ -133,9 +133,9 @@ padding-bottom: 230px;
 
 /*this is important for collpsed nav bar*/
 .navbar-custom .navbar-toggle {
-  /*background-color: #00ff00;*/
-  background-color: white;
-  font-size: 10px;
+  background-color: #00ff00;
+  /*background-color: #FFF600;*/
+  font-size: 20px;
 }
 
 

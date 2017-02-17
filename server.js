@@ -68,6 +68,10 @@ app.get('/nasa', function(req, res){
   res.sendfile(__dirname + '/public/nasa.html');
 });
 
+app.get('/work', function(req, res){
+  res.sendfile(__dirname + '/public/work.html');
+});
+
 app.get('/ribbon', function(req, res){
   res.sendfile(__dirname + '/public/ribbon.html');
 });
@@ -115,7 +119,7 @@ app.get('/projects', function(req, res){
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
 // });
-
+ //
  app.listen(process.env.PORT, process.env.IP, function(){
    console.log(" I am listening on some port");
  });
