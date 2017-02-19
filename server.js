@@ -25,6 +25,10 @@ app.get('/daily', function(req, res){
   res.sendfile(__dirname + '/public/daily.html');
 });
 
+app.get('/microhouse', function(req, res){
+  res.sendfile(__dirname + '/public/microhouse.html');
+});
+
 app.get('/products', function(req, res){
   res.sendfile(__dirname + '/public/products.html');
 });
@@ -119,7 +123,7 @@ app.get('/projects', function(req, res){
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
 // });
- //
+
  app.listen(process.env.PORT, process.env.IP, function(){
    console.log(" I am listening on some port");
  });
