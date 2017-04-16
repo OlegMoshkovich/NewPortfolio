@@ -85,7 +85,7 @@ html {
   margin-bottom: 0;
 	font-size: 150%;
   margin-left: 0px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-family:  "UnionA",Arial,Helvetica,sans-serif;
   background-color: transparent;
 	  /*padding-top: 10px; */

@@ -112,7 +112,7 @@ app.get('/61b', function(req, res){
   res.sendfile(__dirname + '/public/61b.html');
 });
 
-app.get('/love', function(req, res){
+app.get('/gv', function(req, res){
   res.sendfile(__dirname + '/public/love.html');
 });
 
@@ -126,7 +126,7 @@ app.get('/projects', function(req, res){
 app.get('/reactapi', function(req, res){
   res.sendfile(__dirname + '/public/reactapi.html');
 });
-//
+
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 3000!');
 // });

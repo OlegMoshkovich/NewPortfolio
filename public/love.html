@@ -16,10 +16,8 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-
 <link rel="shortcut icon" href="img/favicon-square.png" type="image/x-icon">
 <script src="js/d3/d3.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -30,36 +28,33 @@
 <style>
 
 .love {
-
 font-weight: bold;
 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 color: #111111;
-
 letter-spacing: -0.04em;
 font-size: 200px;
-line-height: 250px;}
+line-height: 250px;
+}
 
 
 ::-webkit-input-placeholder { /* Chrome */
   color: black;
 }
-.click {
 
+.click {
 font-weight: bold;
 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 color: black;
-
 letter-spacing: -0.04em;
 font-size: 40px;
 line-height: 50px;
-text-align: center;}
+text-align: center;
+}
 
 .block {
   height: 1400px;
   text-align: center;
-  background: #636669;
-  /*background: #636669;*/
-  /*change the outer border*/
+  background:#0c0c0c;
   margin: 10px;
 }
 
@@ -76,10 +71,8 @@ text-align: center;}
   vertical-align: middle;
   width: 1400px;
   padding: 5px 5px;
-  /*change this line for the letter line*/
   background:white;
 }
-
 
 input[type=text] {
     width: 50%;
@@ -87,6 +80,7 @@ input[type=text] {
     margin: 30px 0;
     box-sizing: border-box;
 }
+
 input[type=submit] {
     width: 20%;
     background-color: white;
@@ -99,92 +93,33 @@ input[type=submit] {
     line-height: 5px;
 }
 
-#content{
-  /*display:none;*/
-}
 #content.show{
   display:block; /* P.S: Use `!important` if missing `#content` (selector specificity). */
 }
 </style>
 
-
-
-
 <br>
-<!-- <div class = 'click' id="toggle"><img src="/img/circle.png" style="width:3%"/></div> -->
-  <section id="question" >
-<div class="click" id="content">
-  <form>
-    <!-- <label><b>Enter a Message</b></label> -->
-    <input type="text" name="message"placeholder="say something about love... " id="user_input">
-
-  </form>
-   <!-- <input type="submit"  value="submit" onclick="showInput();" id = "div"><br/> -->
-     <a class="page-scroll" href="#intro">
-       <input type="image" src="/img/circle.png" onclick="showInput();" width = "2%" id = "div">
-</a>
-   </div>
-  </section>
+<section id="question" >
+    <div class="click" id="content">
+      <form>
+        <input type="text" name="message"placeholder="message here... " id="user_input">
+      </form>
+      <a class="page-scroll" href="#intro">
+        <input type="image" src="/img/circle.png" onclick="showInput();" width = "2%" id = "div">
+      </a>
+    </div>
+</section>
 
 
   <section id="intro" >
-<div class="block">
-    <div class="centered">
-      <!-- <a class="page-scroll" href="#question"> -->
-<marquee behavior="scroll" direction="left" class = 'love' scrollamount="10" >
-  <!-- </a> -->
-  <span id='display' >love</span>
-</marquee>
-</div>
-</div>
-
-
-
-<!-- <div class = "click">
-<a class="page-scroll" href="#question">
-  <img src="img/circle.png" id="bg" width = 5% alt="" /></a>
-</a>
-</div> -->
-
-<!-- <br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br> -->
+    <div class="block">
+      <div class="centered">
+          <marquee behavior="scroll" direction="left" class = 'love' scrollamount="10" >
+            <span id='display' >Good Day</span>
+          </marquee>
+        </div>
+      </div>
   </section>
-<!-- <div id="toggle">.</div> -->
 
 
 
@@ -198,14 +133,8 @@ var content = document.getElementById("content");
 function showInput() {
 document.getElementById('display').innerHTML =
 document.getElementById("user_input").value;
-// toggle.addEventListener("div", function(){
-//   content.classList.toggle("show");
-// }, false);
 
  }
-
-
-
 
 
 toggle.addEventListener("click", function(){
