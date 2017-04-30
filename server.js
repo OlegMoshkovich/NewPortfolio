@@ -123,8 +123,13 @@ app.get('/cabin', function(req, res){
 app.get('/projects', function(req, res){
   res.sendfile(__dirname + '/public/projects.html');
 });
+
 app.get('/reactapi', function(req, res){
   res.sendfile(__dirname + '/public/reactapi.html');
+});
+
+app.get('/imaginedfragments', function(req, res){
+  res.sendfile(__dirname + '/public/imaginedfragments.html');
 });
 
 // app.listen(5000, function () {
