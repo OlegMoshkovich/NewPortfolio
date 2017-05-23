@@ -135,29 +135,11 @@ app.get('/imaginedfragments', function(req, res){
 });
 
 // app.listen(5000, function () {
-//  console.log('Example app listening on port 3000!');
+//  console.log('Example app listening on port 5000!');
 // });
 
-// app.get('/nyt', function(req, res){
-//   res.sendFile(__dirname + '/public/nytimes.html');
-// });
 
-// app.get('/data',function(req, res){
-//   request.get({
-//     url: "https://api.nytimes.com/svc/search/v2/articlesearch.json",
-//     qs: {
-//       'api-key': "cea0c170135f46debdef6dc8fd0158a8",
-//       'q': "technology",
-//       'begin_date': "20150901",
-//       'end_date': "20170405"
-//     },
-//   }, function(err, response, body) {
-//     body = JSON.parse(body);
-//     res.send(body.response.docs)
-//   })
-// });
+app.listen(process.env.PORT, process.env.IP, function(){
+  console.log(" I am listening on some port");
 
- app.listen(process.env.PORT, process.env.IP, function(){
-   console.log(" I am listening on some port");
-
- });
+});
