@@ -1,0 +1,31 @@
+<div id="data">
+
+</div>
+
+<script>
+var client = new XMLHttpRequest();
+client.open('GET', "/data",true  )
+client.send()
+
+client.onreadystatechange = function(){
+if( client.readyState === 4 & client.status === 200){
+  var articles = JSON.parse(client.responseText);
+  var statusHTML = '<ul class = "bulleted">'
+  for (var i=0; i<articles.length; i+=1){
+    console.log(articles[i].web_url);
+    statusHTML += '<li>';
+    statusHTML += '<a href="';
+    statusHTML += articles[i].web_url;
+    statusHTML += '">';
+    statusHTML += articles[i].headline.main;
+    statusHTML += '</a>';
+    statusHTML += '</li>';
+  }
+  statusHTML +='</ul>'
+  document.getElementById('data').innerHTML = statusHTML;
+}
+
+}
+
+
+</script>
