@@ -128,7 +128,7 @@ app.get('/projects', function(req, res){
 });
 
 app.get('/workcurrent', function(req, res){
-  res.sendfile(__dirname + '/public/work_current.html');
+  res.sendfile(__dirname + '/public/workcurrent.html');
 });
 
 app.get('/reactapi', function(req, res){
