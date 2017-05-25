@@ -140,8 +140,12 @@ app.get('/imaginedfragments', function(req, res){
 });
 
 app.get('/nyt', function(req, res){
-  res.sendfile(__dirname + '/public/nytimes.html');
-});
+  res.send
+  });
+
+app.get('/dthree', function(req, res){
+  res.sendfile(__dirname + '/public/dthree.html');
+  });
 
 app.get('/data',function(req, res){
   request.get({
@@ -164,13 +168,8 @@ app.get('/data',function(req, res){
 
 
 // app.get('/new',function(req, res){
-//
-//
-//
-//
 // });
 
 app.listen(process.env.PORT, process.env.IP, function(){
   console.log(" I am listening on some port");
-
 });
