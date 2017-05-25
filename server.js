@@ -127,7 +127,7 @@ app.get('/projects', function(req, res){
   res.sendfile(__dirname + '/public/projects.html');
 });
 
-app.get('/work_current', function(req, res){
+app.get('/workcurrent', function(req, res){
   res.sendfile(__dirname + '/public/work_current.html');
 });
 
