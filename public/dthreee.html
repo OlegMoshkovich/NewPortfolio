@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+<title>D3 Practice Space</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body style = "cursor:none">
+<div id = "viz-wrapper">
+
+</div>
+
+<script type="text/javascript">
+
+var viz = d3.select("#viz-wrapper")
+                .append('svg')
+                .attr('id', 'viz')
+                .attr('height','800')
+                .attr('width','1600');
+
+d3.json("/data", function(error,data){
+  for (var i=0;i<data.length;i++){
+  console.log(data[i].print_page)
+}
+  dots = viz.selectAll('circle')
+               .data(data)
+               .enter()
+              .append('circle');
+
+  dots.attr('r', function(d){return d.print_page/2} );
+  dots.attr('cx', function(d){return d.print_page*15+200} );
+  dots.attr('cy', function(d){return d.print_page+100} );
+
+})
+
+
+
+
+</script>
+
+</body>

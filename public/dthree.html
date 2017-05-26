@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 <title>D3 Practice Space</title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -12,15 +13,20 @@
 <div class="y" id = "number"></div>
 
 <script type="text/javascript">
+
 mySVG = d3.select('body')
           .append('svg')
           .attr('height','800')
           .attr('width','1600');
-          mySVG.append('circle')
-               .attr('id','circle')
-               .attr('class','one')
 
-d3.select('#circle').attr('cx','800').attr('cy','200').attr('r','100px')
+mySVG.append('circle')
+     .attr('id','circle')
+     .attr('class','one')
+
+d3.select('#circle')
+  .attr('cx','800')
+  .attr('cy','200')
+  .attr('r','100px')
 
 $( document ).on( "mousemove", function( event ) {
 
@@ -31,7 +37,12 @@ colorx=event.pageX/5;
 colory=event.pageY/5;
 
 mycolor = d3.rgb(12, colory, colorx);
-d3.select('#circle').style('fill',mycolor).style('stroke','black').attr('cx',x+100).attr('cy',y+100)
+
+d3.select('#circle')
+  .style('fill',mycolor)
+  .style('stroke','black')
+  .attr('cx',x+100)
+  .attr('cy',y+100)
 
 $(".x").text(x);
 $(".y").text(y);
@@ -40,10 +51,20 @@ d3.selectAll("#number").style("font-family", "Helvetica Neue")
 
 });
 
+d3.json("/data", function(error,data){
+  console.log(data)
+  console.log(error)
+})
 
-function moveCircle(){
-  d3.select('#circle').attr('cx','200').attr('cy','200').attr('r','100px')
+
+function data(){
+  $.get("/data",function(response){
+  data = response;
+  return data
+})
 }
+
+
 
 </script>
 

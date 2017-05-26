@@ -140,11 +140,19 @@ app.get('/imaginedfragments', function(req, res){
 });
 
 app.get('/nyt', function(req, res){
-  res.send
+    res.sendfile(__dirname + '/public/nytimes.html');
   });
 
 app.get('/dthree', function(req, res){
   res.sendfile(__dirname + '/public/dthree.html');
+  });
+
+app.get('/dthreee', function(req, res){
+  res.sendfile(__dirname + '/public/dthreee.html');
+  });
+
+app.get('/titanic', function(req, res){
+  res.sendfile(__dirname + '/public/dthree-titanic.html');
   });
 
 app.get('/data',function(req, res){
