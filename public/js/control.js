@@ -28,13 +28,6 @@ function mouseOver(){
 
 function mouseOut(){
  document.getElementById(id).style.background = "red";
-
-
-
-
-
-
-
 }
 
 function position(w,h){

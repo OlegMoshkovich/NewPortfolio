@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('form').submit(function(evt){
+      evt.preventDefault();
+      var url = $(this).attr("action");
+      var formData = $(this).serialize();
+      $.ajax(url,{
+        data: formData,
+        type:'POST',
+        success:function(response){
+          console.log("all was successful")
+        }
+})
+
+      // $.post(url,formData, function(response){
+      //   $(".formDiv").html("<p>Thank you!</p>" )
+      // })
+  })
+})
+</script>
+<div class="formDiv">
+<form action="/postdata">
+  Name:<br>
+  <input type="text" name="Name" placeholder="Name">
+  <br>
+  Message:<br>
+  <input type="text" name="Message" placeholder="Simple">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+<p> Submit the form using AJAX</p>
+</div>
+</body>
+</html>

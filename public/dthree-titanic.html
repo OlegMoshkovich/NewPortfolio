@@ -1,77 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-<title>D3 Practice Space</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>D3 Practice Space</title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<body style = "cursor:none">
+<body style = "cursor:s">
 
+  <style media="screen">
+  path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  stroke-width: 1px;
+}
+  </style>
 
-  <div class="title" style="text-align:center;">sample - titanic passangers - age distribution</div>
+<div class="title" style="text-align:center;">sample - titanic passangers - age distribution</div>
 <div class="image" style="text-align:center;">
-<img src="img/data/iceberg.png" style="width:50px;">
+<img src="img/data/titanic.png" style="width:50px;">
 </div>
-
-
 
 <div id = "viz-wrapper"></div>
 
 <script type="text/javascript">
+var height = '700'
+var width = '1450'
+var padding = '50'
+
+
 
 var viz = d3.select("#viz-wrapper")
                 .append('svg')
                 .attr('id', 'viz')
-                .attr('height','800')
-                .attr('width','1600');
+                .attr('height', height)
+                .attr('width',width)
+                .attr('transform',
+                    'translate(' + padding + ',' + padding + ')')
+                .style('font-size','11px');
+
+// viz.append("text")
+//     .attr("x", (width / 2))
+//     .attr("y", 50)
+//     .attr("text-anchor", "middle")
+//     .style("font-size", "20px")
+//     .style("text-decoration", "underline")
+//     .text("Value vs Date Graph");
+
+
+var yScale = d3.scale.linear()
+                      .range([height, 0]);
+var xScale = d3.scale.linear()
+                      .range([30, width-60]);
+
+var xAxis = d3.svg.axis().scale(xScale)
+                      .orient('bottom')
+                      .ticks(8);
+var yAxis = d3.svg.axis().scale(yScale)
+                      .orient('left')
+                      .ticks(20);
+
+
+
+
 
 d3.json("datasets/titanic.json", function(error,data){
-console.log(data);
-  for (var i=0;i<1;i++){
-  console.log(data);
-  }
+  console.log(data)
 
 
 
+//This is important for scaling the data d3.extent methods are mapping the maximum and minimum
+//values of the data
+        yDomain = d3.extent(data, function(element){
+          return parseInt(element.Age)
+        });
+        xDomain = d3.extent(data, function(element){
+          return parseInt(element.PassengerId)
+        });
 
-  dots = viz.selectAll('circle')
-               .data(data)
-               .enter()
-              .append('circle');
+       yScale.domain(yDomain);//insert the date domain that will map to the visual range
+       xScale.domain(xDomain)//maps data domain to the visual range
 
-  dots.attr('r', '5px' );
-  dots.attr('cx', function(d){return d.PassengerId*2.5-2000 });
-  dots.attr('cy', function(d){return d.Age*6+200});
+//Add x-Axis
+
+viz.append('g')
+  .attr('class','x-axis')
+  .attr('transform','translate(0,'+(height-80)+')')
+  .call(xAxis)
+
+viz.append('g')
+  .attr('class','y-axis')
+  .attr('transform','translate(25,-80)')
+  .call(yAxis)
+
+dots = viz.selectAll('g.dots')
+        .data(data)
+        .enter()
+        .append('g')
+        .attr('class', 'dots');
+
+dots.attr('transform',function(d){
+  //get the x position
+  x = xScale(d.PassengerId)
+  //get the y position
+  y = yScale((d.Age)+10)
+  return 'translate(' + x + ',' + y + ')'
+  });
+
+  dots.append('circle')
+      .attr('r', 5);
+
+  dots.append('text')
+      .text(function(d){
+        return d.Name})
+      .style('font-size','20px')
+      .style('font-family','courier')
+      .style('display','none');
+
+
+  dots.on('mouseenter',function(d,i){
+    dot = d3.select(this);
+    dot.select('text')
+        .style('display','block');
+    dot.select('circle')
+        .attr('r',10)
+  })
+
+  dots.on('mouseleave',function(d,i){
+    dot = d3.select(this);
+    dot.select('text')
+        .style('display','none')
+    dot.select('circle')
+        .attr('r',5)
+  })
+
   dots.classed("male",function(d){if(d.Sex === "male"){return "male"} })
   dots.classed("female",function(d){if(d.Sex === "female"){return "female"} })
-
-  d3.selectAll(".male").style('fill','#f2f2f2').style('stroke','#d3d3d3');
+  d3.selectAll(".male").style('fill','#1589FF').style('stroke','#d3d3d3');
   d3.selectAll(".female").style('fill','#6BFF00').style('stroke','#d3d3d3');
-
-
-  for (var i=0;i<data.length;i++){
-  // console.log(data[i].Age);
-
-  if(data[i].Sex === "male"){
-      // dots.attr('cy', '500px');
-      console.log("male:"+data[i].Age)
-  }
-
-  if(data[i].Sex === "female"){
-      // dots.attr('cy', '800px');
-      console.log("female:"+data[i].Age)
-  }
-
-  }
-
-
-
+  d3.selectAll("text").style('fill','grey').style('stroke','grey');
 
 })
 
-
+d3.select(".domain").style('color','red')
 
 </script>
 

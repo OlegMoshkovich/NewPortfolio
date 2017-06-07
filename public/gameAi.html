@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Game</title>
+<script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<br>
+<br>
+    <div style="display:block; text-align: center " >
+      Tic Tac Toe
+    </div>
+</head>
+
+<body>
+  <div id="gameboard"style="display:block; text-align: center ">
+  </div>
+
+  <div class="win" style="display:none;text-align: center" >
+  </div>
+
+  <div class="winner" style="text-align: center" >
+  </div>
+  <br>
+  <br>
+  <div class='reload'style="display:none; text-align: center "onclick = location.reload()>
+  <img src="img/reload.png"  height="110" width="110">
+  </div>
+
+<script type="text/javascript">
+var dataset = [
+  { x: 100, y: 100 },
+  { x: 100, y: 200 },
+  { x: 100, y: 300 },
+  { x: 200, y: 100 },
+  { x: 200, y: 200 },
+  { x: 200, y: 300 },
+  { x: 300, y: 100 },
+  { x: 300, y: 200 },
+  { x: 300, y: 300 }
+];
+var tickCount = 0;
+var takCount = 0;
+var count = 0;
+var currentTick = [];
+var currentTok = [];
+var obj;
+var winners = [["11","12","13"],["21","22","23"],["31","32","33"],
+["11","21","31"],["12","22","32"],["13","23","33"],["11","22","33"],["13","22","31"]]
+
+//Setting up the board
+mySVG = d3.select('#gameboard')
+          .append('svg')
+          .attr('height','380')
+          .attr('width','400');
+var dots = mySVG.selectAll('circle')
+              .data(dataset)
+              .enter()
+              .append('circle')
+              .attr('r','20px')
+
+//identify each circle
+dots.attr('id',function(d){
+  x = d.x
+  y = d.y
+  return(x.toString()[0] +  y.toString()[0])
+  }).attr('transform',function(d){
+    x = d.x
+    y = d.y
+    return 'translate(' + x + ',' + y + ')'
+    });
+
+
+
+dots.on("click", function() {
+
+  var coords = d3.mouse(this);
+
+  if (count % 2 === 0){
+           d3.select(this).attr('fill','red')
+                          .attr('class','tick')
+                          .attr('r','22px');
+
+           var id = d3.select(this)._groups[0][0].id;
+             currentTick.push(id)
+             count++;
+  }else{
+    d3.select(this).attr('fill','blue')
+                   .attr('class','tak')
+                   .attr('r','22px');
+
+     var id = d3.select(this)._groups[0][0].id;
+     currentTok.push(id)
+     count++;
+
+    }
+           for(i=0;i<winners.length;i++){
+             if( winnerCheck(winners[i],currentTick) === true){
+               win("RED HAS WON");
+               $(".winner").css("color", "red")
+             }else if(winnerCheck(winners[i],currentTok) === true){
+                win("BLUE HAS WON");
+                $(".winner").css("color", "blue")
+             }
+           }
+
+           if (count === 9){
+             win("DRAW");
+             $(".winner").css("color", "BLACK")
+           }
+       })
+
+
+function winnerCheck(winner, current){
+  for(var i = 0; i < winner.length; i++){
+    if(current.indexOf(winner[i]) === -1)
+  return false;
+  }
+  return true;
+  }
+
+function win(winner){
+  console.log(winner)
+ $(".win").css("display", "block");
+ $(".reload").css("display", "block");
+ $(".winner").text(winner)
+ dots.on('click',null);
+}
+
+</script>
+</body>

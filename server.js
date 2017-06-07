@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.static('public'));
-// var request = require('request');
+var request = require('request');
 var http = require('http');
 
 
@@ -154,6 +154,37 @@ app.get('/dthreee', function(req, res){
 app.get('/titanic', function(req, res){
   res.sendfile(__dirname + '/public/dthree-titanic.html');
   });
+
+app.get('/tree1', function(req, res){
+  res.sendfile(__dirname + '/public/dthree-tree-1.html');
+  });
+
+app.get('/tree', function(req, res){
+  res.sendfile(__dirname + '/public/dthree-tree.html');
+  });
+app.get('/application', function(req, res){
+    res.sendfile(__dirname + '/public/application.html');
+    });
+
+app.get('/game', function(req, res){
+    res.sendfile(__dirname + '/public/game.html');
+    });
+
+app.get('/gamerandom', function(req, res){
+    res.sendfile(__dirname + '/public/gameRandom.html');
+    });
+
+app.get('/gameai', function(req, res){
+    res.sendfile(__dirname + '/public/gameAi.html');
+    });
+
+app.get('/post', function(req, res){
+    res.sendfile(__dirname + '/public/post.html');
+    });
+app.post('/postdata', function (req, res) {
+  console.log("post data is hit" + req)
+})
+
 
 app.get('/data',function(req, res){
   request.get({

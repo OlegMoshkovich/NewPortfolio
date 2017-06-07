@@ -1,0 +1,156 @@
+<div class="">
+  Recursive center Application
+</div>
+
+<div id="Quesion1">
+What is the most fascinating thing you've learned in the past month?
+</div>
+<div id="Answer1">
+The most fascinating thing that I learned is the fact that the elements of AI is all around us.
+I heard about it before - however I did not fully realized the extend of the AI presence
+I started machine learning course with Andrew NG and learned about
+linearregresion algorithms
+and logistic regression
+and the basic mathematics behind neural networks
+</div>
+
+<div id="Quesion2">
+WHat do you want to be doing in 2 years
+</div>
+<div id="Answer1">
+in two years I would like to be proficient with machine learning methodologies and data science
+I would like to be able to apply this methodologies to generate products thata are meant to
+help people in one or another
+provide more insights in to the practice of design - green architecture and construction
+
+</div>
+
+<div id="Quesion3">
+Why do you want to attend the Recurse Center?
+</div>
+<div id="Answer1">
+I would like to attent the Recurse Center to focus on developing programing craft.
+The 6 weeks of focus on programming exclusively and a great desire and rediness to learn the craft
+will provided me with the opportunity to obtain knowledge I desire, and hone on the skillset
+that is very important.
+</div>
+
+
+<div id="Quesion4">
+What would you like to work on at the Recurse Center?
+</div>
+<div id="Answer1">
+While in ther center I would like to work on general understanding of functional programming and datascience.
+I want to complete a machine learning project end to end in different languages  - python and javascript, and make an
+application that would accept a dataset in the form of json upload the data to the cloud database
+and vizualize that data - suggest the anomolies and help the user to do all of the operations necessary to prepare the
+dataset for the machine learning algorithm
+</div>
+
+
+<div id="Quesion5">
+Describe your programming background in a few sentences.
+</div>
+
+<div id="Answer1">
+  I started experimenting with programing during my time at the grad school about 10 years ago.
+  Back then the maini forcus of programing task was aroung processing - and automation of geometry analysis using c++.
+  About 4 year ago I decided to learn web develoment and attended 10 weeks corse to learn ruby on rails, I made
+  2 web apps that help illustrate how certain processed could be better improved using a webapp for the
+  data colleciton
+  I noticed that node offers greater flexibility, learned fundumnetals of express and made several apps in Node,
+  javascript is what I have been learning + practicing and still practicing. I tried a bit of react, and d3 vizualization
+
+</div>
+
+<div id="Quesion6">
+Have you worked professionally as a programmer?
+</div>
+<div id="Answer1">
+never professionally but I did use programming to prototype ideas at work - and to demonstrate the potential
+</div>
+
+<div id="Quesion7">
+Do you have a Computer Science degree or are you seeking one?
+</div>
+<div id="Answer1">
+do not have a degree - and not seeking it at this point
+</div>
+
+<div id="Quesion7">
+  How did you hear about RC?
+</div>
+<div id="Answer1">
+I heard about RC about 4 years ago at the time of ruby class - however did not feel I was ready for the self directed
+studies. now I am 
+</div>
+
+
+
+
+<div id="Array">
+
+</div>
+
+
+<div id="Total">
+
+</div>
+
+
+
+<script type="text/javascript">
+var info = [];
+for (i=1;i<101;i++){
+
+
+
+if(i%3 === 0 & i%5 === 0){
+
+  console.log('CracklePop');
+  info.push("CracklePop")
+
+}else if(i%3 === 0 ){
+  console.log('Crackle');
+  info.push('Crackle')
+}else if(i%5 === 0 ){
+  console.log('Pop')
+  info.push('Pop')
+}else{
+  console.log(i)
+}
+
+};
+
+var crackleCount = 1
+var popCount = 1
+var cracklePopCount = 1
+
+var statusHTML = '<ul class = "bulleted">'
+for (var i=0; i<info.length; i+=1){
+  statusHTML += '<li>';
+  statusHTML += info[i];
+  if(info[i] == 'Crackle'){
+    statusHTML += ' ' ;
+    statusHTML += crackleCount ;
+    crackleCount++
+  }
+  if(info[i] == 'Pop'){
+    statusHTML += ' ' ;
+    statusHTML += popCount ;
+    popCount++
+  }
+  if(info[i] == 'CracklePop'){
+    statusHTML += ' ' ;
+    statusHTML += cracklePopCount ;
+    cracklePopCount++
+  }
+  statusHTML += '</li>';
+}
+
+statusHTML +='</ul>'
+document.getElementById("Array").innerHTML = statusHTML;
+document.getElementById("Total").innerHTML = 'cracklePopCount' + ' ' + cracklePopCount;
+
+
+</script>
