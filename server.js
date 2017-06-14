@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
 app.use(express.static('public'));
-// var request = require('request');
+var request = require('request');
 var http = require('http');
+var bodyParser = require('body-parser')
+fs = require('fs');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
   res.sendfile(__dirname + '/public/index.html');
@@ -127,7 +131,7 @@ app.get('/projects', function(req, res){
   res.sendfile(__dirname + '/public/projects.html');
 });
 
-app.get('/workcurrent', function(req, res){
+app.get('/imagefromthefuture', function(req, res){
   res.sendfile(__dirname + '/public/workcurrent.html');
 });
 
@@ -181,8 +185,30 @@ app.get('/gameai', function(req, res){
 app.get('/post', function(req, res){
     res.sendfile(__dirname + '/public/post.html');
     });
+
+app.get('/recursion', function(req, res){
+  res.sendfile(__dirname + '/public/recursion.html');
+  });
+
+app.get('/productprototype', function(req, res){
+  res.sendfile(__dirname + '/public/simulate.html');
+  });
+
+
 app.post('/postdata', function (req, res) {
-  console.log("post data is hit" + req)
+     var number = req.body.number;
+     var factorial = req.body.factorial;
+
+     var entry = new Object();
+     entry.number = number;
+     entry.factorial = factorial;
+
+     console.log('number ' + number)
+     console.log('factorial ' + factorial)
+     console.log('object: ' + entry.factorial)
+
+     fs.appendFile('public/files/test.txt', entry.number, 'utf-8');
+
 })
 
 
@@ -201,14 +227,14 @@ app.get('/data',function(req, res){
   })
 });
 
-// app.listen(5000, function () {
-//  console.log('Example app listening on port 5000!');
-// });
+app.listen(5000, function () {
+ console.log('Example app listening on port 5000!');
+});
 
 
 // app.get('/new',function(req, res){
 // });
 
-app.listen(process.env.PORT, process.env.IP, function(){
-  console.log(" I am listening on some port");
-});
+// app.listen(process.env.PORT, process.env.IP, function(){
+//   console.log(" I am listening on some port");
+// });

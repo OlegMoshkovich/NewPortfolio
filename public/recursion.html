@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Recursion</title>
+<script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<br>
+<br>
+
+<style media="screen">
+.text {
+  font-size: 120%;
+  text-align: center;
+  font-family:  "UnionA",Arial,Helvetica,sans-serif;
+  background-color: transparent;
+}
+input{
+   text-align:center;
+}
+</style>
+
+    <div class = 'text'style="display:block; text-align: center " >
+      ...try to hit the beginning of infinity
+    </div>
+</head>
+
+<body>
+<br>
+<br>
+
+<form id="target" action="/postdata" style="display:block; text-align: center ">
+<input id ='number' type="number" placeholder = "number">
+</form>
+
+<br>
+<br>
+
+<div class = 'text'style="display:block; text-align: center "onclick = $('#target').submit()>
+<img src="img/factorial.png"  height="110" width="110">
+</div>
+
+<br>
+<br>
+<div id="result" class = 'text'>
+
+
+
+  <script>
+  var counter=0
+  $( 'form' ).submit(function( event ) {
+    event.preventDefault();
+    var number = $('#number').val();
+    var factorial = recursion(number) + "  - 171";
+
+    $('#result').empty();
+    $('#result').text(factorial);
+    var url = $(this).attr('action');
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: {'number':number,'factorial':factorial},
+      success: console.log('this is successful')
+    });
+counter ++;
+console.log("countre: "+counter)
+  });
+
+function recursion(n){
+      if (n == 1){
+        return 1;
+      }else{
+      return n*recursion(n-1)
+      }
+  }
+
+
+
+
+
+  </script>
