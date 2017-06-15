@@ -6,8 +6,8 @@ app.use(express.static('public'));
 // var bodyParser = require('body-parser')
 // fs = require('fs');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
   res.sendfile(__dirname + '/public/index.html');
@@ -195,37 +195,37 @@ app.get('/productprototype', function(req, res){
   });
 
 
-app.post('/postdata', function (req, res) {
-     var number = req.body.number;
-     var factorial = req.body.factorial;
+// app.post('/postdata', function (req, res) {
+//      var number = req.body.number;
+//      var factorial = req.body.factorial;
+//
+//      var entry = new Object();
+//      entry.number = number;
+//      entry.factorial = factorial;
+//
+//      console.log('number ' + number)
+//      console.log('factorial ' + factorial)
+//      console.log('object: ' + entry.factorial)
+//
+//      fs.appendFile('public/files/test.txt', entry.number, 'utf-8');
+//
+// })
 
-     var entry = new Object();
-     entry.number = number;
-     entry.factorial = factorial;
 
-     console.log('number ' + number)
-     console.log('factorial ' + factorial)
-     console.log('object: ' + entry.factorial)
-
-     fs.appendFile('public/files/test.txt', entry.number, 'utf-8');
-
-})
-
-
-app.get('/data',function(req, res){
-  request.get({
-    url: "https://api.nytimes.com/svc/search/v2/articlesearch.json",
-    qs: {
-      'api-key': "cea0c170135f46debdef6dc8fd0158a8",
-      'q': "technology",
-      'begin_date': "20150901",
-      'end_date': "20170405"
-    },
-  }, function(err, response, body) {
-    body = JSON.parse(body);
-    res.send(body.response.docs)
-  })
-});
+// app.get('/data',function(req, res){
+//   request.get({
+//     url: "https://api.nytimes.com/svc/search/v2/articlesearch.json",
+//     qs: {
+//       'api-key': "cea0c170135f46debdef6dc8fd0158a8",
+//       'q': "technology",
+//       'begin_date': "20150901",
+//       'end_date': "20170405"
+//     },
+//   }, function(err, response, body) {
+//     body = JSON.parse(body);
+//     res.send(body.response.docs)
+//   })
+// });
 
 // app.listen(5000, function () {
 //  console.log('Example app listening on port 5000!');
