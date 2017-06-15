@@ -39,21 +39,18 @@ var dataset = [
   { x: 300, y: 200 },
   { x: 300, y: 300 }
 ];
-
+var redCount = 0;
+var takCount = 0;
 var count = 0;
 var currentRed = [];
 var currentBlue = [];
 var Player;
-var score = [];
 
-//var aiCircles = [];
-//var humanCircles =[];
-var winner;
 var obj;
 var color;
 var winners = [["11","12","13"],["21","22","23"],["31","32","33"],
 ["11","21","31"],["12","22","32"],["13","23","33"],["11","22","33"],["13","22","31"]]
-var currentBoard = [
+var availableCircles = [
   {"id":"11","player":"empty"},
   {"id":"12","player":"empty"},
   {"id":"13","player":"empty"},
@@ -64,7 +61,6 @@ var currentBoard = [
   {"id":"32","player":"empty"},
   {"id":"33","player":"empty"},
 ]
-var availableCircles = currentBoard;
 
 
 var score = 0;
@@ -93,99 +89,111 @@ dots.attr('id',function(d){
 //Click function
 dots.on("click", function() {
 
-         var coords = d3.mouse(this);
+        var coords = d3.mouse(this);
+
          d3.select(this).attr('fill','red').attr('class','red').attr('r','22px');
          var id = d3.select(this)._groups[0][0].id;
          currentRed.push(id)
          color = 'red'
-         player = "human"
          count++;
+         boardState(availableCircles,id,color);
+        //  evaluation(availableCircles);
+        var iterations =availableCircles.length ;
 
-         boardState(availableCircles,id,player);
-         var aiCircle =evaluate(availableCircles,currentBoard);
-         console.log("circleID"+ aiCircle)
+        for (i = 0; i < iterations; i++) {
 
-         $('#'+ aiCircle).css("fill", "blue")
-         var aC = JSON.stringify(availableCircles);
-         var cB = JSON.stringify(currentBoard);
+          move(availableCircles,"aiPlayer");
+          for(i=0;i<winners.length;i++){
+            if( winnerCheck(winners[i],currentRed) === true){
+              win("human has won");
+              $(".winner").css("color", "red")
+              score = -10
+            }else if(winnerCheck(winners[i],currentBlue) === true){
+               win("Ai has won");
+               $(".winner").css("color", "blue")
+             score = +10
+            }
+          }
 
-          // console.log("currentBoard" + cB)
-        //  console.log("availableCircles" + aC)
+          }
+
+console.log('score' + score)
+
+        // for (i = 0; i < iterations; i++) {
+        //   if (count % 2 === 0){
+        //   move(availableCircles,"aiPlayer");
+        //   count++;
+        //    }else{
+        //   move(availableCircles,"humanPlayer")
+        //   console.log("in the human move - " + availableCircles.length)
+        //   count++;
+        //   }
+        // }
+
+
+       for(i=0;i<winners.length;i++){
+         if( winnerCheck(winners[i],currentRed) === true){
+           win("human has won");
+           $(".winner").css("color", "red")
+           score = -10
+         }else if(winnerCheck(winners[i],currentBlue) === true){
+            win("Ai has won");
+            $(".winner").css("color", "blue")
+          score = +10
+         }
+       }
+
+       if (count === 9){
+         win("DRAW");
+         $(".winner").css("color", "BLACK")
+         score = 0
+       }
+
 })
 
 
-function boardState(board,id,player){
-  var newBoard=[]
-  Object.keys(board).forEach(function(key) {
-    if(id != board[key].id ){
-    newBoard.push(board[key])}
-    else{
-      board[key].player = player;
-    }
-  });
-  availableCircles = newBoard;
+
+function move(board,player){
+  var color;
+  if (player === "humanPlayer"){
+    color = 'red'
+  }else{
+    color = 'blue'
+  }
+  var id = board[0].id;
+  board[0].player = player;
+  $('#'+id).attr('fill',color).attr('class',color).attr('r','22px')
+  boardState(board,id,color);
 }
 
 
+function aiMove(board){
+  var aiMoveId = board[0].id;
+  board[0].player = 'blue';
+  return aiMoveId
 
-function evaluate(availableCircles,currentBoard){
-  var circleID;
-  var humanCircles = [];
-  var aiCircles = [];
-  var iterations = availableCircles.length
-  // console.log("iteration:"+iterations);
-  for(i=0;i<iterations;i++){
+}
 
-    availableCircles[i].player = 'human';
-    id = availableCircles[i].id;
-    var aC = JSON.stringify(availableCircles);
-    // console.log("start:"+aC);
+function humanMove(board){
+  var huMoveId = board[0].id;
+  board[0].player = 'red';
+  return huMoveId
+}
 
-    Object.keys(currentBoard).forEach(function(key) {
-    if (currentBoard[key].player === 'human'){
-      humanCircles.push(currentBoard[key].id)
-    }else if(currentBoard[key].player === 'ai') {
-      aiCircles.push(currentBoard[key].id)
+
+function boardState(board,id,color){
+  var newBoard=[]
+  Object.keys(board).forEach(function(key) {
+    if(id != board[key].id ){
+    console.log(board[key].id)
+    newBoard.push(board[key])}
+    else{
+      board[key].player = color
     }
-    });
+  });
 
-    // console.log('AI'+ aiCircles)
-    // console.log('human'+ humanCircles)
+availableCircles = newBoard;
 
-    for(j=0;j<winners.length;j++){
-      if( winnerCheck(winners[j], humanCircles) === true){
-        // console.log("human won");
-        winner = 'human'
-      }else if(winnerCheck(winners[j], aiCircles) === true){
-        // console.log("ai won");
-       winner = 'ai'
-    }else{
-      winner = 'ok'
-      // console.log("ok");
-    }
-  // console.log("id:"+id +" winner:" + winner)
-      if (winner === 'human'){
-        circleID = id;
-
-      }
-    }
-
-    if (i === 0){
-      //  console.log("i am undefined")
-      circleID = availableCircles[0].id;
-    }
-
-      // console.log("circleID:"+circleID);
-      availableCircles[i].player = 'empty'
-      var aC = JSON.stringify(availableCircles);
-      humanCircles = [];
-      aiCircles = [];
-    // console.log("end:"+ aC);
-    // console.log('availableCircles:'+aC)
-    // console.log('score '+score)
-  }
-// console.log("circleID"+ circleID)
-return circleID
 }
 
 
@@ -198,6 +206,13 @@ function winnerCheck(winner, current){
   return true;
   }
 
+function win(winner){
+  console.log(winner)
+ $(".win").css("display", "block");
+ $(".reload").css("display", "block");
+ $(".winner").text(winner)
+ dots.on('click',null);
+}
 
 </script>
 </body>

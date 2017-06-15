@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 app.use(express.static('public'));
-var request = require('request');
-var http = require('http');
-var bodyParser = require('body-parser')
-fs = require('fs');
+// var request = require('request');
+// var http = require('http');
+// var bodyParser = require('body-parser')
+// fs = require('fs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -227,14 +227,14 @@ app.get('/data',function(req, res){
   })
 });
 
-app.listen(5000, function () {
- console.log('Example app listening on port 5000!');
-});
+// app.listen(5000, function () {
+//  console.log('Example app listening on port 5000!');
+// });
 
 
 // app.get('/new',function(req, res){
 // });
 
-// app.listen(process.env.PORT, process.env.IP, function(){
-//   console.log(" I am listening on some port");
-// });
+app.listen(process.env.PORT, process.env.IP, function(){
+  console.log(" I am listening on some port");
+});
