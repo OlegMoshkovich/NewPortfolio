@@ -1,0 +1,161 @@
+<div class="">
+  Recursive center Application
+</div>
+
+<div id="Quesion1">
+What is the most fascinating thing you've learned in the past month?
+</div>
+<div id="Answer1">
+The most fascinating thing that I learned is the fact that the elements of AI is all around us.
+I heard about it before - however I did not fully realized the extend of the AI presence
+I started а machine learning course with Andrew NG and learned about
+linearregresion algorithms
+and logistic regression
+and the basic mathematics behind neural networks. That sparked my interest in Algortithm and Data science.
+I started listening to the expalination of the divide and conquer algortihms, and currently learning about merge sort.
+At the moment I am reading the first book in the foundation series, and that is quite fascinating.
+</div>
+
+<div id="Quesion2">
+WHat do you want to be doing in 2 years
+</div>
+<div id="Answer1">
+in two years I would like to be proficient with machine learning methodologies and do work realted to datascience and AI.
+I would like to be able to apply this methodologies to generate products thata are meant to
+help people in one or another
+provide more insights in to the practice of design of sustainable architecture and construction.
+I would like to be a part of a team of excellent and aligned individuals and do work that is directly related to solving
+problems related to Global warming.
+</div>
+
+<div id="Quesion3">
+Why do you want to attend the Recurse Center?
+</div>
+<div id="Answer1">
+I would like to attent the Recurse Center to focus on developing programing craft, and to be surrounded by
+inspiring and interesting people.
+I have been working on developing ability to program by myself for a long time, it has always been in parallel.
+I feel ready to focus exclusively on programming and would like to be in the atmosphere where I am surrounded by
+people who are focued and driven.
+</div>
+
+
+<div id="Quesion4">
+What would you like to work on at the Recurse Center?
+</div>
+<br>
+<div id="Answer1">
+While in ther center I would like to focus my work on machine learning and datascience.
+I want to complete a machine learning project end to end. I would like to work with data, organize and visualize
+data, regularize data and apply apply machine learning tequnies to analyze dataset and make predictions based on the
+insights contained in the data.
+</div>
+<br>
+
+<div id="Quesion5">
+Describe your programming background in a few sentences.
+</div>
+<br>
+<div id="Answer1">
+  I started experimenting with programing during my time at the grad school about 10 years ago.
+  Back then the main forcus of programing task was aroung physical computing and data visualization
+  using processsing.
+  Also I learned automation of geometrical analysis using c++.
+  About 4 year ago I decided to learn web develoment and attended 10 weeks course to learn ruby on rails.
+  At that time I worked for MTA on Grand Central Mega Project. It was apparent that the data collections methods
+  used for managing the project required a serious upgrade, I used my web development skills to prototype the solutions
+  and to illustrate available improvements.
+  After working with Rail for a shortwhile I was attracted to Node, so I learned express and expremented with developing
+  in javascript. d3 is fascinating labrary, I am practicing it at the moment.
+</div>
+<br>
+<div id="Quesion6">
+Have you worked professionally as a programmer?
+</div>
+<br>
+<div id="Answer1">
+never professionally but I did use programming to prototype ideas at work, and illustrate potenatial of smarter solutions.
+</div>
+<br>
+<div id="Quesion7">
+Do you have a Computer Science degree or are you seeking one?
+</div>
+<br>
+<div id="Answer1">
+do not have a degree - and not seeking it at this point
+</div>
+<br>
+<div id="Quesion7">
+  How did you hear about RC?
+</div>
+<br>
+<div id="Answer1">
+I heard about RC about 4 years ago at the time of ruby class - however did not feel I was ready for the self directed
+studies. I feel right now is the perfect time for me.
+</div>
+<br>
+
+
+
+<div id="Array">
+
+</div>
+
+
+<div id="Total">
+
+</div>
+
+
+
+<script type="text/javascript">
+var info = [];
+for (i=1;i<101;i++){
+if(i%3 === 0 & i%5 === 0){
+
+  console.log('CracklePop');
+  info.push("CracklePop")
+}else if(i%3 === 0 ){
+  console.log('Crackle');
+  info.push('Crackle')
+}else if(i%5 === 0 ){
+  console.log('Pop')
+  info.push('Pop')
+}else{
+  console.log(i)
+}
+
+};
+
+var crackleCount = 1
+var popCount = 1
+var cracklePopCount = 1
+
+var statusHTML = '<ul class = "bulleted">'
+for (var i=0; i<info.length; i+=1){
+  statusHTML += '<li>';
+  statusHTML += info[i];
+  if(info[i] == 'Crackle'){
+    statusHTML += ' ' ;
+    statusHTML += crackleCount ;
+    crackleCount++
+  }
+  if(info[i] == 'Pop'){
+    statusHTML += ' ' ;
+    statusHTML += popCount ;
+    popCount++
+  }
+  if(info[i] == 'CracklePop'){
+    statusHTML += ' ' ;
+    statusHTML += cracklePopCount ;
+    cracklePopCount++
+  }
+  statusHTML += '</li>';
+}
+
+statusHTML +='</ul>'
+document.getElementById("Array").innerHTML = statusHTML;
+document.getElementById("Total").innerHTML = 'cracklePopCount' + ' ' + cracklePopCount;
+
+
+</script>

@@ -116,7 +116,7 @@ app.get('/japan', function(req, res){
 });
 
 app.get('/61b', function(req, res){
-  res.sendfile(__dirname + '/public/61b.html');
+  res.sendfile(__dirname + '/public/61broadway.html');
 });
 
 app.get('/gv', function(req, res){
