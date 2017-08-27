@@ -134,6 +134,9 @@ app.get('/projects', function(req, res){
 app.get('/imagefromthefuture', function(req, res){
   res.sendfile(__dirname + '/public/workcurrent.html');
 });
+app.get('/resume', function(req, res){
+  res.sendfile(__dirname + '/public/resume.html');
+});
 
 app.get('/reactapi', function(req, res){
   res.sendfile(__dirname + '/public/reactapi.html');
