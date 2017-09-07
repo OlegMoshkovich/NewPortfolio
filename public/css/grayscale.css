@@ -66,6 +66,7 @@
  .node text {
    font: 16px sans-serif;
    font-family:  "UnionA",Arial,Helvetica,sans-serif;
+   text-transform: lowercase;
 
  }
  .link {
