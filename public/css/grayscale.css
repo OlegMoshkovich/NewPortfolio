@@ -64,9 +64,9 @@
    stroke-width: .5px;
  }
  .node text {
-   font: 15px sans-serif;
-   font-family: 'Helvetica', sans-serif;
-   text-transform: uppercase;
+   font: 16px sans-serif;
+   font-family:  "UnionA",Arial,Helvetica,sans-serif;
+
  }
  .link {
    fill: none;
