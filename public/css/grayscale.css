@@ -86,9 +86,7 @@ html {
 .navbar-custom {
   margin-bottom: 0;
   text-transform: uppercase;
-	font-size: 200%;
-  color: #000000;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 110%;
   margin-left: 0px;
   background-color: transparent;
 
@@ -119,7 +117,7 @@ html {
   text-transform: uppercase;
   font-family:  "Geometric Regular",sans-serif;
   background-color: transparent;
-  /*color: #2A2A2A;*/
+  color: #2A2A2A;
       line-height: 4.5rem;
   letter-spacing: -.03em;
   position: relative;
@@ -161,8 +159,7 @@ color: white;
 .navbar-custom .nav li a:hover {
   /*color: #FFF600;*/
 	/*color:#f6f6f6;*/
-    color: black;
-
+    color: #96928f;
   outline: none;
   background-color: transparent;
   text-transform: uppercase;
@@ -174,14 +171,12 @@ color: white;
 .navbar-custom .nav li.active a {
   background-color: transparent;
   /*color:#f6f6f6;*/
-    /*color: #96928f;*/
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #96928f;
     text-transform: uppercase;
 }
 .navbar-custom .nav li.active a:hover {
   /*color: #f6f6f6;*/
-    /*color: #96928f;*/
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #96928f;
     text-transform: uppercase;
 }
 
