@@ -36,7 +36,7 @@
 
    /*controlls the appearance of the navbar when it is collapsed*/
    .navbar-custom.top-nav-collapse {
-     padding: 0;
+     padding: 100;
      background: transparent;
      /*border-bottom: 1px solid transparent;*/
    }
@@ -90,7 +90,7 @@ html {
   margin-left: 0px;
   background-color: transparent;
 
-	  /*padding-top: 10px; */
+	  padding-top: 20px; 
 }
 
 #project{
