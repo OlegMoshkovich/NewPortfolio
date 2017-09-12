@@ -94,17 +94,22 @@ button{
 .navbar-custom  li a {
   color: black;
   letter-spacing: 1px;
-
+  background-color: white;
   line-height: 100%;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  color: black;
+  border: 1px solid white;
 }
 
 .navbar-custom .nav li a:hover {
-  color: #96928f;
+  /*color: #96928f;*/
+  color: black;
+  border: 1px solid lightgrey;
+  outline-color: transparent;
   outline: none;
-  background-color: transparent;
+  background-color: white;
   text-transform: uppercase;
 }
 
