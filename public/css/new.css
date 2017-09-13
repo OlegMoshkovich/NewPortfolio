@@ -1,0 +1,187 @@
+/* some basic styles. nothing to do with flexbox */
+   header, footer,
+   nav, article, aside {
+     border: 1px solid black;
+     padding: 0.25em;
+     margin: 0.25em;
+     border-radius: 0.25em;
+   }
+
+   /*
+     Force full width & height.
+
+     If this block is removed, the layout height/length will be determined by
+     the amount of content in the page. That might result in a page which has
+     a footer only a few inches from the top of the viewport, or one which
+     scrolls beyond the viewport.
+
+     This forces the layout to always be full screen regardless of how much,
+     or how little, content is in place. Neither is "right" or "wrong", there
+     are valid cases for each. I just want to be clear what's controlling the
+     page/viewport height.
+   */
+   html, body, .viewport {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+   }
+
+   /* encapsulate the various syntax in helper clases */
+   /* inspired by http://infrequently.org/2009/08/css-3-progress/ */
+
+   /* items flex/expand vertically */
+   .vbox {
+
+
+     /* current syntax */
+     display: -webkit-flex;
+     display:    -moz-flex;
+     display:     -ms-flex;
+     display:         flex;
+
+     -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+         -ms-flex-direction: column;
+             flex-direction: column;
+   }
+
+   /* items flex/expand horizontally */
+   .hbox {
+
+
+     /* current syntax */
+     display: -webkit-flex;
+     display:    -moz-flex;
+     display:     -ms-flex;
+     display:         flex;
+
+     -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+         -ms-flex-direction: row;
+             flex-direction: row;
+   }
+
+   .space-between {
+
+     /* current syntax */
+     -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+         -ms-justify-content: space-between;
+             justify-content: space-between;
+   }
+
+   /* I went with a fixed height header & footer because it's a common case.
+     This could easily be altered to flex proportionally with the page.
+   */
+   header, footer {
+     height: 100px;
+   }
+
+   .main {
+
+
+     /* current syntax */
+     -webkit-flex: 1;
+        -moz-flex: 1;
+         -ms-flex: 1;
+             flex: 1;
+   }
+
+   article {
+
+     /* current syntax */
+     -webkit-flex: 5;
+        -moz-flex: 5;
+         -ms-flex: 5;
+             flex: 5;
+
+
+   }
+
+   article img {
+     width: 80%;
+     height: auto;
+     display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+   }
+
+   aside, nav {
+     /* previous syntax */
+     -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+         -ms-box-flex: 1;
+             box-flex: 1;
+
+     /* current syntax */
+     -webkit-flex: 1;
+        -moz-flex: 1;
+         -ms-flex: 1;
+             flex: 1;
+   }
+
+
+
+
+
+
+.hello{
+  color:red;
+}
+
+.flex-container-title {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 100px;
+    background-color: transparent;
+}
+.flex-container-description {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 500px;
+    background-color: transparent;
+}
+.smallitem {
+   -webkit-flex: 1 0 0;
+   background-color: black;
+   justify-content: center;
+   flex: 1 0 0;
+   text-align: center;
+
+}
+.bigitem {
+   /* This will be twice as big as the small item. */
+   -webkit-flex: 2 0 0;
+   background-color: transparent;
+   flex: 2 0 0;
+   text-align: center;
+
+}
+.smallitem img {
+  width: 50%;
+  height: auto;
+}
+.bigitem img {
+  width: 100%;
+  height: auto;
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }

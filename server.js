@@ -137,6 +137,10 @@ app.get('/imagefromthefuture', function(req, res){
 app.get('/resume', function(req, res){
   res.sendfile(__dirname + '/public/resume.html');
 });
+app.get('/resume_1', function(req, res){
+  res.sendfile(__dirname + '/public/resume-new.html');
+});
+
 
 app.get('/reactapi', function(req, res){
   res.sendfile(__dirname + '/public/reactapi.html');
@@ -197,6 +201,13 @@ app.get('/productprototype', function(req, res){
   res.sendfile(__dirname + '/public/simulate.html');
   });
 
+app.get('/new', function(req, res){
+  res.sendfile(__dirname + '/public/new.html');
+  });
+
+  app.get('/thoughts', function(req, res){
+    res.sendfile(__dirname + '/public/thoughts.html');
+    });
 
 // app.post('/postdata', function (req, res) {
 //      var number = req.body.number;
@@ -238,6 +249,6 @@ app.get('/productprototype', function(req, res){
 // app.get('/new',function(req, res){
 // });
 
-app.listen(process.env.PORT, process.env.IP, function(){
-  console.log(" I am listening on some port");
-});
+// app.listen(process.env.PORT, process.env.IP, function(){
+//   console.log(" I am listening on some port");
+// });
