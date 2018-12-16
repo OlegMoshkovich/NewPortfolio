@@ -100,7 +100,7 @@ var treeData = [
   "children": [
 
     {
-      "name": "Visual Stories",
+      "name": "Topics",
       "parent": "Top Level",
       "url": "https://drive.google.com/drive/folders/0B3sUe5JV3r-7YmtKRF9qeFNBT1E",
       "children": [
@@ -278,7 +278,7 @@ var treeData = [
     },
 
     {
-      "name": "Project Videos",
+      "name": "Projects",
       "parent": "Top Level",
       "url": "https://drive.google.com/drive/folders/0B640nk3FrNfHbzJoeU50N0RKbmM",
       "children": [
@@ -438,7 +438,7 @@ var treeData = [
 // ************** Generate the tree diagram	 *****************
 var margin = {top: 20, right: 300, bottom: 20, left:150},
 width = 1200 - margin.right - margin.left,
-height = 500 - margin.top - margin.bottom;
+height = 700 - margin.top - margin.bottom;
 
 var i = 0,
 duration = 750,
@@ -485,7 +485,7 @@ var nodeEnter = node.enter().append("g")
 
 nodeEnter.append("circle")
   .attr("r", 1e-6)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#6BFF00"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#0029FF"; });
 
 nodeEnter.append("text")
   .attr("x", function(d) { return d.children || d._children ? -13 : 13; })
@@ -504,7 +504,7 @@ var nodeUpdate = node.transition()
 
 nodeUpdate.select("circle")
   .attr("r", 5)
-  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#6BFF00"; });
+  .style("fill", function(d) { return d._children ? "#d2d2d2" : "#0029FF"; });
 
 nodeUpdate.select("text")
   .style("fill-opacity", 1);
