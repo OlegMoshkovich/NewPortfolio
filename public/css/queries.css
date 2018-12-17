@@ -8,9 +8,9 @@
    header{
      /* background-size: cover; */
      /* background-position: center; */
-     /* height: 150vh; */
+     height: 120vh;
      /* width:100% */
-     display:none;
+     /* display:none; */
    }
    nav{
      display:none;
@@ -31,8 +31,15 @@
    .hero-text-box {
      display: inline-block;
      position:relative;
-     top:30rem;
+     top:25rem;
      left:6rem;
+   }
+   header{
+     /* background-size: cover; */
+     /* background-position: center; */
+     height: 110vh;
+     /* width:100% */
+     /* display:none; */
    }
    .header-text{
      color: blue;
@@ -70,11 +77,19 @@
        border: 1px solid blue;
    } */
 
+   .title-box{
+     position:relative ;
+     display: inline-block;
+     top:3rem;
+     /* padding-right:10rem; */
+     left:6rem;
+   }
+
    .project-title {
-     display:inline;
+     /* display:inline; */
      /* padding-left:1rem; */
-     padding-right:1rem;
-     background-color: #0029FF;
+     /* padding-right:1rem; */
+     /* background-color: #0029FF; */
      text-decoration: none;
      color: #fff;
      font-weight: 300;
@@ -130,13 +145,13 @@
    .img-main-ribbon{
      /* display: block; */
      /* width: 90%; */
-     margin: 3rem auto -3rem 4rem;
-     position: relativeimg-main-ribbon-photo;
+     margin: 3rem auto 0 4rem;
+     position: relative;
    }
    .img-main-ribbon-photo{
      width:85%;
      display: inline-block;
-     margin: -2rem auto 2rem 4rem;
+     margin: -10rem auto 0rem 4rem;
      position: relative;
    }
    #gif{
@@ -163,14 +178,14 @@
    .img-main-gs{
      display: inline-block;
      width: 100%;
-     margin:6rem 0rem -2rem;
+     margin:0rem 0rem -2rem;
      position: relative;
    }
    .video-gs{
      /* border: 1px solid blue; */
      display: block;
      width: 100%;
-     margin: 5rem 0rem 0rem;
+     margin: 5rem 0rem 10rem;
      position: relative;
      z-index:0;
    }
@@ -243,7 +258,11 @@
    text-align: center;
     z-index:100;}
 
-
+    .mobile{
+      padding-top:5rem;
+      padding-bottom:5rem;
+      color:blue;
+    }
 
  }
 
