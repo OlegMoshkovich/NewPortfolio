@@ -178,7 +178,7 @@
    .description-long-box{
      position:relative;
      width:85%;
-     top:3rem;
+     top:1rem;
      left:6rem;
    }
    .description-long-box-micro{
@@ -186,6 +186,12 @@
      width:85%;
      top:-6rem;
      left:6rem;
+   }
+   .description{
+     font-size:1.5rem;
+     font-weight: 300;
+     letter-spacing: .1rem;
+     color: blue;
    }
 
 
