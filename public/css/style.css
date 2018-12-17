@@ -97,7 +97,7 @@ section{
   text-align:center;
   display:inline-block;
   height:100%;
-  margin-top:5rem;
+  margin-top:10rem;
   /* width:100%; */
 }
 .img-main{
@@ -128,7 +128,7 @@ section{
 .img-main-ribbon-photo{
   width:80%;
   display: inline-block;
-  margin: 10rem auto 10rem;
+  margin: 12rem auto 10rem;
   position: relative;
 }
 
@@ -409,6 +409,21 @@ width: 1.5rem;
 user-select: none;
 text-align: center; }
 
+.navigation__button-imaginedfragments {
+font-size: 1.5rem;
+color: #fff;
+position: fixed;
+bottom: 3rem;
+right: 4rem;
+background-color: #0029FF;
+z-index: 1000;
+border-radius: 50%;
+height: 1.5rem;
+width: 1.5rem;
+-webkit-touch-callout: none;
+user-select: none;
+text-align: center; }
+
 .navigation__button-github {
 font-size: 1.5rem;
 color: #fff;
@@ -428,7 +443,7 @@ text-align: center; }
 font-size: 1.5rem;
 color: #fff;
 position: fixed;
-bottom: 5rem;
+bottom: 6rem;
 left: 3rem;
 background-color: blue;
 z-index: 1000;

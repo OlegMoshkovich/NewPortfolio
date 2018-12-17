@@ -9,7 +9,8 @@
      /* background-size: cover; */
      /* background-position: center; */
      /* height: 150vh; */
-     width:100%
+     /* width:100% */
+     display:none;
    }
    nav{
      display:none;
@@ -133,9 +134,9 @@
      position: relativeimg-main-ribbon-photo;
    }
    .img-main-ribbon-photo{
-     width:100%;
+     width:85%;
      display: inline-block;
-     margin: -9rem auto 2rem 4rem;
+     margin: -2rem auto 2rem 4rem;
      position: relative;
    }
    #gif{
