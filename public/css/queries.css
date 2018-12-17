@@ -1,0 +1,99 @@
+/*Iphone x  */
+ @media only screen and (min-width: 375px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+   section{
+     /* background-size: cover; */
+     /* background-position: center; */
+     /* height: 100vh; */
+   }
+   header{
+     background-size: cover;
+     background-position: center;
+     height: 150vh;
+   }
+   .hero-text-box {
+     display: inline-block;
+     position:relative;
+     top:17rem;
+     left:6rem;
+   }
+   .header-text{
+     color: blue;
+     display: block;
+     width: 80vw;
+     font-size: 3rem;
+     font-weight: 200;
+     /* letter-spacing: .1rem; */
+     line-height: 4.5rem;
+     backface-visibility: hidden;
+   }
+   .title {
+     position:relative;
+     top:1rem;
+     font-size:1.5rem;
+   }
+   .navigation__button-10 {
+   font-size: 1.5rem;
+   color: #fff;
+   position: fixed;
+   top: 16rem;
+   right: 4.5rem;
+   background-color: #0029FF;
+   z-index: 1000;
+   border-radius: 50%;
+   height: 1.5rem;
+   width: 1.5rem;
+   -webkit-touch-callout: none;
+   user-select: none;
+   text-align: center; }
+
+   .navigation__button-hcs {
+   font-size: 1.5rem;
+   color: #fff;
+   position: fixed;
+   top: 13rem;;
+   right: 4.5rem;
+   background-color: #0029FF;
+   z-index: 1000;
+   border-radius: 50%;
+   height: 1.5rem;
+   width: 1.5rem;
+   -webkit-touch-callout: none;
+   user-select: none;
+   text-align: center; }
+
+   .navigation__button-gs {
+   font-size: 1.5rem;
+   color: #fff;
+   position: fixed;
+   top: 10rem;
+   right: 4.5rem;
+   background-color: #0029FF;
+   z-index: 1000;
+   border-radius: 50%;
+   height: 1.5rem;
+   width: 1.5rem;
+   -webkit-touch-callout: none;
+   user-select: none;
+   text-align: center; }
+
+
+
+ }
+
+
+
+
+/* small phones from 0 - 480px */
+@media only screen and (max-width:767px){
+
+
+}
+
+
+
+
+/* small phones from 0 - 480px */
+@media only screen and (max-width:480px){
+
+
+}

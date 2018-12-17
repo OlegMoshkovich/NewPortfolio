@@ -30,7 +30,7 @@ footer{
 
 }
 section{
-  /* background-size: cover; */
+  background-size: cover;
   /* background-position: center; */
   /* height: 100vh; */
 }
@@ -38,7 +38,6 @@ section{
   position:relative;
   top:1rem;
   font-size:1.5rem;
-
 }
 .blink_me {
   position:relative;
@@ -214,14 +213,9 @@ section{
   color: blue;
 }
 .link{
-  color:'black';
-  text-decoration: none;
-  color: black;
+  text-decoration: underline;
+  color: blue;
 }
-
-
-
-
 .main-nav{
   position:fixed;
   right:2.4rem;
@@ -313,21 +307,6 @@ color: #fff;
 position: fixed;
 top: 4.9rem;
 right: 10rem;
-background-color: #0029FF;
-z-index: 1000;
-border-radius: 50%;
-height: 1.5rem;
-width: 1.5rem;
--webkit-touch-callout: none;
-user-select: none;
-text-align: center; }
-
-.navigation__button-hcs {
-font-size: 1.5rem;
-color: #fff;
-position: fixed;
-top: 4.9rem;
-right: 11rem;
 background-color: #0029FF;
 z-index: 1000;
 border-radius: 50%;
