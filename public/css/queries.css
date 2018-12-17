@@ -10,10 +10,13 @@
      background-position: center;
      height: 150vh;
    }
+   .nav{
+     z-index:1000;
+   }
    .hero-text-box {
      display: inline-block;
      position:relative;
-     top:17rem;
+     top:30rem;
      left:6rem;
    }
    .header-text{
@@ -26,16 +29,156 @@
      line-height: 4.5rem;
      backface-visibility: hidden;
    }
-   .title {
-     position:relative;
-     top:1rem;
-     font-size:1.5rem;
+   .main-nav{
+     position:fixed;
+     right:2.4rem;
+     top:10rem;
+     float:right;
+     text-decoration: none;
+     list-style: none;
+     z-index:12;
+     display:none;
+     /* border: 1px solid blue; */
    }
+
+   .main-nav li a:link,
+   .main-nav li a:visited {
+     z-index:5;
+     color:blue;
+     text-decoration: none;
+     font-size: 1.5rem;
+     padding:.5rem;
+     border: 1px solid transparent;
+   }
+   .main-nav li a:hover,
+   .main-nav li a:active {
+       border: 1px solid blue;
+   }
+
+   .project-title {
+     display:inline;
+     padding-left:1rem;
+     padding-right:1rem;
+     background-color: #0029FF;
+     text-decoration: none;
+     color: #fff;
+     font-weight: 300;
+     font-size: 2.5rem;
+     line-height: 3.8rem;
+   }
+   .row .col-1-of-2 {
+     width: 100%;
+     padding-top:2rem}
+   .row .col-1-of-3 {
+     width: 100%;
+     padding-top:2rem}
+   /* .section-gs{
+     height:140vh;
+   } */
+
+   .img-main-box{
+     height:100%;
+     /* width:100%; */
+   }
+   .img-secondary{
+     display: block;
+     width: 90%;
+     margin: 8rem auto;
+     position: relative;
+   }
+   .img-tertiary-container-gs{
+     margin-top: 1rem;
+     margin-left:3rem;
+     margin-top:7rem;
+     /* border:1px solid blue; */
+   }
+   .img-main-hcs{
+     display: block;
+     width: 100%;
+     margin: 8rem auto;
+     position: relative;
+   }
+   .img-col-ribbon{
+     display:inline-block;
+     width:100%;
+
+     outline:.3px solid blue;
+   }
+
+   .img-tertiary-container-ribbon{
+     display:inline-block;
+     margin: 3rem 3rem 3rem;
+
+     /* margin-bottom: 80rem; */
+     /* border:1px solid blue; */
+   }
+   .img-main-ribbon{
+     /* display: block; */
+     /* width: 90%; */
+     margin: 3rem auto -3rem 4rem;
+     position: relativeimg-main-ribbon-photo;
+   }
+   .img-main-ribbon-photo{
+     width:100%;
+     display: inline-block;
+     margin: -9rem auto 2rem 4rem;
+     position: relative;
+   }
+   #gif{
+     /* width:100%; */
+     /* margin-left:5rem; */
+     /* margin-bottom:10rem */
+   }
+   .video-hcs{
+     /* display: block; */
+     width: 70%;
+     margin: 10rem 0rem 5rem 4rem;
+     position: relative;
+   }
+   #ribbon-description{
+     display:none;
+   }
+
+   #test{
+     width:100%;
+     margin-left:-1rem;
+     margin-top:-10rem;
+     margin-bottom:0rem;
+   }
+   .img-main-gs{
+     display: inline-block;
+     width: 100%;
+     margin:6rem 0rem -2rem;
+     position: relative;
+   }
+   .video-gs{
+     /* border: 1px solid blue; */
+     display: block;
+     width: 100%;
+     margin: 5rem 0rem 0rem;
+     position: relative;
+     z-index:0;
+   }
+
+   .description-long-box{
+     position:relative;
+     width:85%;
+     top:3rem;
+     left:6rem;
+   }
+   .description-long-box-micro{
+     position:relative;
+     width:85%;
+     top:-6rem;
+     left:6rem;
+   }
+
+
    .navigation__button-10 {
    font-size: 1.5rem;
    color: #fff;
    position: fixed;
-   top: 16rem;
+   top: 19rem;
    right: 4.5rem;
    background-color: #0029FF;
    z-index: 1000;
@@ -44,13 +187,14 @@
    width: 1.5rem;
    -webkit-touch-callout: none;
    user-select: none;
-   text-align: center; }
+   text-align: center;
+   z-index:100;}
 
    .navigation__button-hcs {
    font-size: 1.5rem;
    color: #fff;
    position: fixed;
-   top: 13rem;;
+   top: 16rem;;
    right: 4.5rem;
    background-color: #0029FF;
    z-index: 1000;
@@ -59,13 +203,14 @@
    width: 1.5rem;
    -webkit-touch-callout: none;
    user-select: none;
-   text-align: center; }
+   text-align: center;
+    z-index:100;}
 
    .navigation__button-gs {
    font-size: 1.5rem;
    color: #fff;
    position: fixed;
-   top: 10rem;
+   top: 13rem;
    right: 4.5rem;
    background-color: #0029FF;
    z-index: 1000;
@@ -74,7 +219,8 @@
    width: 1.5rem;
    -webkit-touch-callout: none;
    user-select: none;
-   text-align: center; }
+   text-align: center;
+    z-index:100;}
 
 
 

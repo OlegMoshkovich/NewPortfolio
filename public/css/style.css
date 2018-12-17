@@ -78,7 +78,7 @@ section{
   left:6rem;
 }
 
-.project_title {
+.project-title {
   display:inline;
   padding-left:1rem;
   padding-right:1rem;
@@ -106,12 +106,24 @@ section{
   margin: 8rem auto;
   position: relative;
 }
+.img-main-hcs{
+  display: block;
+  width: 60%;
+  margin: 8rem auto;
+  position: relative;
+}
+.img-main-gs{
+  display: block;
+  width: 60%;
+  margin: 8rem auto;
+  position: relative;
+}
 
 .img-main-ribbon{
   display: block;
   width: 90%;
   margin: 2rem auto;
-  position: relativeimg-main-ribbon-photo;
+  position: relative;
 }
 .img-main-ribbon-photo{
   width:80%;
@@ -131,6 +143,8 @@ section{
   text-align:center;
   /* width:100%; */img-tertiary-container-hcs
 }
+
+
 .video{
   display: inline-block;
   /* top:40rem; */
@@ -143,7 +157,18 @@ section{
   width: 80%;
   margin: 5rem 4rem 10rem;
   position: relative;
-
+}
+.video-box-hcs{
+  margin:0rem;
+  height:100%;
+  text-align:center;
+  /* width:100%; */
+}
+.video-hcs{
+  /* display: block; */
+  width: 40%;
+  margin: 15rem 4rem 10rem;
+  position: relative;
 }
 
 .space{
@@ -155,6 +180,22 @@ section{
   /* border:1px solid blue; */
 }
 
+.img-tertiary-container-gs{
+  margin-top: 1rem;
+  margin-left:10rem;
+  margin-top:15rem;
+  /* border:1px solid blue; */
+}
+#gif{
+  width:80%;
+  margin-left:5rem;
+  margin-bottom:10rem
+}
+#test{
+  width:80%;
+  margin-left:7rem
+}
+
 
 .img-tertiary-container-hcs{
   margin-top: 15rem;
@@ -164,6 +205,7 @@ section{
 .img-tertiary-container-ribbon{
   display:inline-block;
   margin: 10rem auto 12rem;
+  margin-left:10rem;
   /* margin-bottom: 80rem; */
   /* border:1px solid blue; */
 }
@@ -186,6 +228,12 @@ section{
 }
 
 .description-long-box{
+  position:relative;
+  width:85%;
+  top:4rem;
+  left:6rem;
+}
+.description-long-box-micro{
   position:relative;
   width:85%;
   top:3rem;

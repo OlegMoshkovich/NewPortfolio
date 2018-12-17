@@ -13,7 +13,9 @@
     </head>
   <body >
 
+
 <!--  .........Navigation -->
+<nav>
 <a href="#10"  class="navigation__button-10" class =".blink_me">
 </a>
 <a href="#hcs"  class="navigation__button-hcs" >
@@ -26,14 +28,13 @@
 </a>
 <a href="https://www.linkedin.com/in/olegmoshkovich"  class="navigation__button-linkedin" >
 </a>
-<nav>
+
   <label for="navi-toggle" class="navigation__button-home">  </a>
     <span class = "blink_me">_</span>
     <a href="#" style = "text-decoration:none; color:white">  <span class = "title">></span></a>
   </label>
 
   <ul class="main-nav">
-    <!-- <li ><a  class="link" href="#header">0</a></li> -->
     <li ><a class="link" href="#gs">1</a></li>
     <li ><a class="link" href="#gs1">2</a></li>
     <li ><a class="link" href="#gs2">3</a></li>
@@ -45,13 +46,8 @@
     <li ><a class="link" href="#10">9</a></li>
     <li ><a class="link" href="#101">10</a></li>
     <li ><a class="link" href="#102">11</a></li>
-
-    <!-- <li ><a class="link" href="#gs5">6</a></li> -->
-    <!-- <li ><a class="link" href="#gs6">7</a></li> -->
-
-
-
   </ul>
+
 </nav>
 <div class="navigation__background">&nbsp;</div>
 
@@ -60,113 +56,116 @@
 
 
         <div class="title-box">
-            <div class="project_title">Oleg Moshkovich / Engineer</div>
+            <div class="project-title">Oleg Moshkovich / Engineer</div>
         </div>
         <div class="hero-text-box">
           <h1 class = "header-text">
-            This portfolio contains some of my work completed over the last  <p>7 years.</p>
+            This portfolio contains some of my work completed over the last 7 years.
           </h1>
         </div>
       </header>
 
-        <section id="gs">
-        <section class="section-gs" id = "gs0">
-          <div class="title-box">
-              <div class="project_title">Girls Scouts / React Native Development</div>
+      <section id="gs">
+      <section class="section-gs" id = "gs0">
+        <div class="title-box">
+            <div class="project-title">Girls Scouts / Mobile Development</div>
+        </div>
+
+        <div class="img-main-box" >
+            <img class = "img-main-gs" src="img/imgPortfolio/gs/gs2.png" alt="">
+        </div>
+      </section>
+      <section class="section-gs" id = "gs1" alt ="video">
+        <div class="description-long-box" >
+          <div class = "description" style="width:90%">
+            In 2017 I joined <a href="https://omission.studio/" class="link" target = _blank >omission.studio</a>, то develop a high fidelity prototype of <br>the Girls Scouts mobile application designed for 1.2 million users.
+            <br>The prototype was build using React Native Framework and EXPO toolchain.
           </div>
-          <div class="img/imgPortfolio-main-box" >
-              <img class = "img-main" src="img/imgPortfolio/gs/gs2.png" alt="">
           </div>
-        </section>
-        <section class="section-gs" id = "gs1" alt ="video">
-          <div class="description-long-box" >
-            <div class = "description" style="width:90%">
-              In 2017 I joined <a href="https://omission.studio/" class="link" target = _blank >omission.studio</a>, то develop a high fidelity prototype of <br>the Girls Scouts mobile application designed for 1.2 million users.
-              <br>The prototype was build using React Native Framework and EXPO toolchain.
+        </div>
+        <div class="img-main-box">
+          <video class = video-gs autoplay muted loop>
+            <source src = "img/imgPortfolio/gs_short_demo.mp4" type = "video/mp4" >
+          </video>
+        </div>
+      </section>
+      <section class="section-gs" id = "gs2" alt ="full image">
+        <div class="description-long-box" >
+          <div class = "description">
+            Product map.
+          </div>
+        <div class="img-main-box">
+          <img class = "img-secondary"src="img/imgPortfolio/gs/map.png"  alt="">
+        </div>
+      </section>
+
+      <section class="section-gs" id = "gs3" alt ="grid-img" >
+        <div class="description-long-box" >
+          <div class = "description">
+            The feature set of the product includes custom avatar system and multi-player game.
+          </div>
+          </div>
+        </div>
+
+        <div class="img-tertiary-container-gs" ">
+          <div class="row">
+            <div class="col-1-of-2">
+              <img class = "img-col"src="img/imgPortfolio/gs/WORLD.png" style = "width:100%">
             </div>
+            <div class="col-1-of-2"  >
+              <img class = "img-col" id ='gif' src="img/imgPortfolio/short/image/project1/image_gif.gif" alt="">
             </div>
           </div>
-          <div class="img-main-box">
-            <video class = video-gs autoplay muted loop>
-              <source src = "img/imgPortfolio/gs_short_demo.mp4" type = "video/mp4" >
-            </video>
+        </div>
+      </section>
+      <section class="section-gs" id = "gs5">
+
+        <div class="description-long-box-micro" >
+          <div class = "description">
+          Microservice architecture powered by the AWS services was selected as the Backend system.
           </div>
-        </section>
-        <section class="section-gs" id = "gs2" alt ="full image">
-          <div class="description-long-box" >
+          </div>
+        </div>
+
+        <div class="img-main-box">
+          <img class = "img-secondary" style = "width:60%" src="img/imgPortfolio/gs/Event_based_architecture.png" alt="">
+        </div>
+
+      </section>
+      <section class="section-gs" id = "gs4" alt ="text-frame">
+
+        <div class="description-long-box">
+          <div class = "description">
+            Extensive user research and testing took place in New York and Washington DC. <br>
+            Feed back from the testing sessions resulted in the definition of the first release feature set.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1-of-2" >
+              <img class = "img-col"id = "test" src="img/imgPortfolio/gs/image1.png" alt="">
+            </div>
+            <div class="col-1-of-2">
+              <img class = "img-col" id = "test" src="img/imgPortfolio/gs/image2.png" alt="">
+            </div>
+          </div>
+
+          <div class="description-long-box-bottom" >
             <div class = "description">
-              Product map.
-            </div>
-
-          <div class="img-main-box">
-            <img class = "img-secondary"src="img/imgPortfolio/gs/map.png"  alt="">
-          </div>
-        </section>
-        <section class="section-gs" id = "gs3" alt ="grid-img" style = " margin-top:15rem">
-          <div class="description-long-box" >
-            <div class = "description">
-              The feature set of the product includes custom avatar system and multi-player game.
-            </div>
+            The production team was engaged in September of 2018.
+            <p>The first version of the application is on schedule to be released in March of 2019.</p>
             </div>
           </div>
-
-          <div class="img-tertiary-container" style = "margin-left:10rem; margin-top:15rem;">
-            <div class="row">
-              <div class="col-1-of-2">
-                <img class = "img-col"src="img/imgPortfolio/gs/WORLD.png" style = "width:100%">
-              </div>
-              <div class="col-1-of-2" >
-                <img class = "img-col" style = "width:80%;margin-left:5rem;margin-bottom:10rem" src="img/imgPortfolio/short/image/project1/image_gif.gif" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-gs" id = "gs5">
-
-          <div class="description-long-box" >
-            <div class = "description">
-            Microservice architecture powered by the AWS services was chosen as the Backend system.
-            </div>
-            </div>
-          </div>
-
-          <div class="img-main-box">
-            <img class = "img-secondary" style = "width:60%" src="img/imgPortfolio/gs/Event_based_architecture.png" alt="">
-          </div>
-
-        </section>
-        <section class="section-gs" id = "gs4" alt ="text-frame">
-
-          <div class="description-long-box">
-            <div class = "description">
-              Extensive user research and testing took place in New York and Washington DC. <br>
-              Feed back from the testing sessions resulted in the definition of the first release feature set.
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-1-of-2">
-                <img class = "img-col" style = "width:80%;margin-left:7rem;"src="img/imgPortfolio/gs/image1.png" alt="">
-              </div>
-              <div class="col-1-of-2">
-                <img class = "img-col" style = "width:80%;margin-left:-5rem" src="img/imgPortfolio/gs/image2.png" alt="">
-              </div>
-            </div>
-            <div class="description-long-box-bottom" >
-              <div class = "description">
-              The production team was engaged in September of 2018.
-              <p>The first version of the application is on schedule to be released in March of 2019.</p>
-              </div>
-            </div>
-        </section>
-        </section>
+      </section>
+      </section>
 
       <section id="hcs">
         <section class="section-hcs" id="hcs">
           <div class="title-box">
-              <div class="project_title">Human Condition Safety / Data Visualization</div>
+              <div class="project-title">Human Condition Safety / Data Visualization</div>
           </div>
           <div class="img-main-box" >
-              <img class = "img-main" src="img/imgPortfolio/hcs_dashboard_1.png" alt="">
+              <img class = "img-main-hcs" src="img/imgPortfolio/hcs_dashboard_1.png" alt="">
           </div>
         </section>
 
@@ -196,11 +195,11 @@
 
           <div class="description-long-box"  >
             <div class = "description">
-                My initial role was Director of Digital Architecture -- it turned out the role of the front-end engineer was more aligned with my skill set and interests, <br>therefore I transitioned into the development after the first year in the company.
+                My initial role was Director of Digital Architecture --  <br> I transitioned into the development after the first year in the company.
             </div>
           </div>
-          <div class="video-box">
-            <video class = video  autoplay muted loop>
+          <div class="video-box-hcs">
+            <video class = video-hcs  autoplay muted loop>
               <source src = "img/imgPortfolio/HCS.mp4" type = "video/mp4" >
             </video>
           </div>
@@ -214,7 +213,7 @@
       <section id="10">
         <section class="section-ribbon" id="10">
           <div class="title-box">
-              <div class="project_title">10 Design / Computational Design</div>
+              <div class="project-title">10 Design / Computational Design</div>
           </div>
           <div class="img-main-box" >
               <img class = "img-main-ribbon" src="img/imgPortfolio/ribbon_dwg.png"  alt="">
@@ -228,7 +227,7 @@
                I was asked to move to Hong Kong for 6 month and consult 10 Design <br>during design development phase of the project.
 
           </div>
-          <div class="img-tertiary-container-ribbon" style = "margin-left:10rem; ">
+          <div class="img-tertiary-container-ribbon" >
             <div class="row">
               <div class="col-1-of-3">
                 <img class = "img-col-ribbon"src="img/imgPortfolio/ribbon1.png" alt="">
@@ -256,7 +255,7 @@
         </section>
 
         <section class="section-ribbon" id="102">
-          <div class="description-long-box" >
+          <div class="description-long-box" id="ribbon-description" >
             <div class = "description">
               The workflow involved using object oriented programing to construct the geometrical system <br>to produced the final form of the structure.
 
@@ -274,6 +273,7 @@
         </section>
 
       </section>
+
       <footer>
         <div style="padding-top:2.0rem;color:blue">more projects are available upon request</div>
         <!-- <div style="padding-top:2rem;color:blue"><a href="">in</a></div> -->
