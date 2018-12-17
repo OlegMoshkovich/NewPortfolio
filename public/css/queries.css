@@ -13,7 +13,7 @@
      /* display:none; */
    }
    nav{
-     display:none;
+     /* display:none; */
    }
    .section-gs{
      display: none;
@@ -151,7 +151,7 @@
    .img-main-ribbon-photo{
      width:85%;
      display: inline-block;
-     margin: -10rem auto 0rem 4rem;
+     margin: -12rem auto 4rem 4rem;
      position: relative;
    }
    #gif{
@@ -175,10 +175,13 @@
      margin-top:-10rem;
      margin-bottom:0rem;
    }
+   #none{
+     display:none;
+   }
    .img-main-gs{
      display: inline-block;
      width: 100%;
-     margin:0rem 0rem -2rem;
+     margin:5rem 0rem 2rem;
      position: relative;
    }
    .video-gs{
