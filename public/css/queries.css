@@ -15,6 +15,14 @@
    nav{
      /* display:none; */
    }
+
+   .blink_me {
+     position:relative;
+     top:1rem;
+     font-size:1.5rem;
+     animation: blinker 1s ;
+     animation-iteration-count: 100;
+   }
    .section-gs{
      display: none;
    }
