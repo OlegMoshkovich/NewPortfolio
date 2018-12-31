@@ -269,6 +269,36 @@
    text-align: center;
     z-index:100;}
 
+    .navigation__button-github {
+    font-size: 1.5rem;
+    color: #fff;
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+    background-color: blue;
+    z-index: 1000;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    -webkit-touch-callout: none;
+    user-select: none;
+    text-align: center; }
+
+    .navigation__button-linkedin {
+    font-size: 1.5rem;
+    color: #fff;
+    position: fixed;
+    bottom: 6rem;
+    left: 3rem;
+    background-color: blue;
+    z-index: 1000;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    -webkit-touch-callout: none;
+    user-select: none;
+    text-align: center; }
+
     .mobile{
       padding-top:5rem;
       padding-bottom:5rem;
