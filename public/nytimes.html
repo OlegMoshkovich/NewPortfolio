@@ -1,61 +1,122 @@
-<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>technology</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,700,900, 400" rel="stylesheet">
+        <link rel="stylesheet" href="css/style_nyt.css">
+        <link rel="stylesheet" href="css/queries.css">
+        <link rel="shortcut icon" href="img/nytimes_white_.png" type="image/png">
+        <title>NY Times Cover Letter</title>
+    </head>
+  <body >
 
-<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-</head>
-<div id="data">
+<!--  .........Navigation -->
+
+<div  class="navigation__button-home">
+  <span class = "blink_me">_</span>
+  <a href="#" style = "text-decoration:none; color:white">  <span class = "title">></span></a>
 </div>
 
-<script>
-$.get("/data",function(response){
-  var statusHTML = '<ul class = "bulleted">'
-  for (var i=0; i<response.length; i+=1){
-    console.log(response[i].web_url);
-    statusHTML += '<li>';
-    statusHTML += '<a href="';
-    statusHTML += response[i].web_url;
-    statusHTML += '">';
-    statusHTML += response[i].headline.main;
-    statusHTML += '</a>';
-    statusHTML += '</li>';
-  }
-  statusHTML +='</ul>'
-  document.getElementById('data').innerHTML = statusHTML;
-})
+<nav>
+<a href="https://github.com/OlegMoshkovich"  class="navigation__button-github" >
+  <img src="img/imgPortfolio/git.png" style="margin-bottom:4px;height:60%" class = "cirlce_img" alt="">
+</a>
+<a href="https://www.linkedin.com/in/olegmoshkovich"  id='none' class="navigation__button-linkedin" >
+  <img src="img/imgPortfolio/in.png" style="margin-bottom:5px;height:50%" class = "cirlce_img" alt="">
+</a>
+
+  <ul class="main-nav">
+    <li ><a class="link" href="#Q1">1</a></li>
+    <li ><a class="link" href="#Q2">2</a></li>
+    <li ><a class="link" href="#Q3">3</a></li>
+  </ul>
+
+</nav>
+
+<div class="navigation__background">&nbsp;</div>
+
+<!--  .........HEADER -->
+      <header class ='header' id ="header">
+
+        <div class="title-box">
+            <div class="project-title">Oleg Moshkovich</div>
+        </div>
+
+        <div class="hero-text-box">
+          <h1 class = "header-text">
+
+            <span class = "highlight">I would like to submit my candidacy for the position of the <br><span class="project-title">frontend engineer for the Interactive News team</span>.
+            brThis page contains the answers to the questions included in the application.</span>
+
+          </h1>
+        </div>
+
+      </header>
+
+      <!-- <section id="Q1">
+      <section class="section-gs-1" id = "gs0">
+        <div class="title-box">
+            <div class="project-title">Question 1: Describe your interest in this role and our team:</div>
+        </div>
+        <div class="description-long-box" >
+          <div class = "job_description" style="width:90%">
+
+            I am looking for a team where I can do intellectually and cretively challenging work, surrounding by brilliant collegues who believe in the cause and are inspired by the work and the outcome.
+            After learning about the special digital projects group, I cannot think of any other place in New York that fascinated me more.
+            <br>
+            I am committed to the frontend engineering; during my carrier I have focused on discovering the gaps in the workflows and processes and developing digital solutions to bridge the gaps introducing clarity and delight.
+            <br>
+            I am an engineer, and tend to approach the world rather rationally, however I do find joy in poetic, this position perhaps is the perfect combination of both worlds, the intersection of technology and culture.
+            <br>
+            The position of the New York Times in the world is inspiring, I would be honored to be the part of the organization and the special projects group im particular.
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row"style = >
+          <div class="col-1-of-2" >
+            <img class = "img-col" id = "test" src="https://nyoobserver.files.wordpress.com/2015/09/capture-8.png" alt="">
+          </div>
+          <div class="col-1-of-2">
+            <img class = "img-col" id = "test" src="https://nyoobserver.files.wordpress.com/2015/09/capture-8.png"  alt="">
+          </div>
+        </div> -->
+      <!-- <div >
+            <img class = "img-main" src="https://nyoobserver.files.wordpress.com/2015/09/capture-8.png" alt="">
+      </div> -->
 
 
 
-// var client = new XMLHttpRequest();
-// client.open('GET', "/data",true  )
-// client.send()
-
-// client.onreadystatechange = function(){
-// if( client.readyState === 4 & client.status === 200){
-//   var articles = JSON.parse(client.responseText);
-//   var statusHTML = '<ul class = "bulleted">'
-//   for (var i=0; i<articles.length; i+=1){
-//     console.log(articles[i].web_url);
-//     statusHTML += '<li>';
-//     statusHTML += '<a href="';
-//     statusHTML += articles[i].web_url;
-//     statusHTML += '">';
-//     statusHTML += articles[i].headline.main;
-//     statusHTML += '</a>';
-//     statusHTML += '</li>';
-//   }
-//   statusHTML +='</ul>'
-//   document.getElementById('data').innerHTML = statusHTML;
-// }
-//
-// }
 
 
-</script>
+      </section>
+
+
+      </section>
+
+
+
+      <footer>
+        <!-- <div style="padding-top:13rem;padding-bottom:0rem;color:blue">More projects are available upon request.</div> -->
+        <!-- <div style="padding-top:5rem;padding-bottom:2.8rem;color:blue">Portfolio is under construction.</div> -->
+
+      </footer>
+
+
+        <!-- <script src="js/main.js"></script>
+        <script> -->
+
+
+        </script>
+
+
+        </script>
+  </body>
+
+</html>

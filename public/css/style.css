@@ -53,9 +53,17 @@ section{
   }
 }
 
-.hero-text-box {
-  display: inline-block;
+/* .hero-text-box {
+  display: block;
   position:relative;
+  top:17rem;
+  left:6rem;
+} */
+
+.hero-text-box {
+  display: block;
+  position:relative;
+  width:90%;
   top:17rem;
   left:6rem;
 }

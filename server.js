@@ -150,7 +150,7 @@ app.get('/imaginedfragments', function(req, res){
   res.sendfile(__dirname + '/public/imaginedfragments.html');
 });
 
-app.get('/nyt', function(req, res){
+app.get('/nytimes', function(req, res){
     res.sendfile(__dirname + '/public/nytimes.html');
   });
 
@@ -205,50 +205,14 @@ app.get('/new', function(req, res){
   res.sendfile(__dirname + '/public/new.html');
   });
 
-  app.get('/thoughts', function(req, res){
+app.get('/thoughts', function(req, res){
     res.sendfile(__dirname + '/public/thoughts.html');
-    });
-
-// app.post('/postdata', function (req, res) {
-//      var number = req.body.number;
-//      var factorial = req.body.factorial;
-//
-//      var entry = new Object();
-//      entry.number = number;
-//      entry.factorial = factorial;
-//
-//      console.log('number ' + number)
-//      console.log('factorial ' + factorial)
-//      console.log('object: ' + entry.factorial)
-//
-//      fs.appendFile('public/files/test.txt', entry.number, 'utf-8');
-//
-// })
+  });
 
 
-// app.get('/data',function(req, res){
-//   request.get({
-//     url: "https://api.nytimes.com/svc/search/v2/articlesearch.json",
-//     qs: {
-//       'api-key': "cea0c170135f46debdef6dc8fd0158a8",
-//       'q': "technology",
-//       'begin_date': "20150901",
-//       'end_date': "20170405"
-//     },
-//   }, function(err, response, body) {
-//     body = JSON.parse(body);
-//     res.send(body.response.docs)
-//   })
-// });
-
-// app.listen(5000, function () {
-//  console.log('Example app listening on port 5000!');
-// });
 
 
-// app.get('/new',function(req, res){
-// });
-//
-app.listen(process.env.PORT, process.env.IP, function(){
+
+app.listen(5000 || process.env.PORT, process.env.IP, function(){
   console.log(" I am listening on some port");
 });
