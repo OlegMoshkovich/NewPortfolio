@@ -213,6 +213,6 @@ app.get('/thoughts', function(req, res){
 
 
 
-app.listen(5000 || process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
   console.log(" I am listening on some port");
 });

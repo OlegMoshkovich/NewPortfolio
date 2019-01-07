@@ -61,8 +61,8 @@ section{
 }
 .header-text{
   color: grey;
-  /* display: block; */
-  /* max-width: 70vw; */
+  display: block;
+  max-width: 80vw;
   font-size: 2.5rem;
   font-weight: 200;
   letter-spacing: .1rem;
@@ -81,7 +81,7 @@ section{
   color: black;
   display: block;
   padding-top:3rem;
-  max-width: 70vw;
+  max-width: 80vw;
   font-size: 2.0rem;
   font-weight: 300;
   letter-spacing: .1rem;
@@ -98,11 +98,17 @@ section{
   letter-spacing: .1rem;
   line-height: 2.5rem;
 }
-.description{
+/* .description{
   font-size:2.5rem;
   font-weight: 300;
   letter-spacing: .1rem;
   color: blue;
+} */
+.description-long-box{
+  position:relative;
+  width:95%;
+  top:4rem;
+  left:6rem;
 }
 .title-box{
   position:relative ;
