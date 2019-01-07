@@ -9,7 +9,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto;
+  /* font-family: 'Tinos', serif; */
   font-weight: 400;
   font-size: 1.6rem;
   color: 'green';
@@ -30,9 +31,12 @@ footer{
 
 }
 section{
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* height: 100vh; */
+}
+a{
+  color:blue;
 }
 
 .title {
@@ -52,7 +56,7 @@ section{
     opacity: 0;
   }
 }
-.hero-text-box {
+.header-text-box {
   display: block;
   position:relative;
   width:90%;
@@ -87,6 +91,17 @@ section{
   letter-spacing: .1rem;
   line-height: 2.5rem;
 }
+.answer{
+  color: black;
+  display: block;
+  padding-top:3rem;
+  max-width: 80vw;
+  font-size: 1.8rem;
+  font-weight: 300;
+  /* font-family: Times; */
+  letter-spacing: .1rem;
+  line-height: 2.5rem;
+}
 
 .description{
   color: black;
@@ -116,8 +131,9 @@ section{
   top:3rem;
   padding-right:10rem;
   left:6rem;
+  letter-spacing: .07rem;
 }
-.project-title {
+.question {
   display:inline;
   padding-left:1rem;
   padding-right:1rem;
