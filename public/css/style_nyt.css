@@ -81,6 +81,31 @@ a{
   letter-spacing: .1rem;
   line-height: 3.5rem;
 }
+.highlight_1 {
+  display:inline;
+  padding-left:1rem;
+  padding-right:1rem;
+  background-color: #0029FF;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  font-size: 2.0rem;
+}
+.date {
+  display:inline-block;
+  padding-left:1rem;
+  padding-right:1rem;
+  margin-top:1rem;
+  margin-bottom:.5rem;
+  background-color: #0029FF;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  font-size: 2.0rem;
+}
+.list {
+  padding-left:4rem;
+}
 .job_description{
   color: black;
   display: block;
@@ -143,16 +168,7 @@ a{
   font-weight: 300;
   font-size: 2.5rem;
 }
-.highlight_1 {
-  display:inline;
-  padding-left:1rem;
-  padding-right:1rem;
-  background-color: #0029FF;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 100;
-  font-size: 2.0rem;
-}
+
 .img-main-box{
   height:100%;
   /* width:100%; */
