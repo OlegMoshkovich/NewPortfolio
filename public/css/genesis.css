@@ -1,0 +1,75 @@
+body {
+  font-family: "Trebuchet MS", "Lucida sans", "Arial";
+  font-size: 14px;
+  color: #444;
+}
+
+.bordered {
+  border: solid #ccc 1px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 1px #ccc;
+  -moz-box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 1px 1px #ccc;
+}
+
+.bordered th,
+.bordered td {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+  text-align: internal-center;
+}
+
+td,
+th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.bordered th {
+  background-color: #dce9f9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+  background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+  background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset;
+  border-top: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+th:first-child {
+  border-radius: 6px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 6px 0 0;
+}
+
+.bordered tr:hover {
+  background: #fbf8e9;
+  transition: all 0.1s ease-in-out;
+}

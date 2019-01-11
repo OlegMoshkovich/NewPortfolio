@@ -209,6 +209,12 @@ app.get('/thoughts', function(req, res){
     res.sendfile(__dirname + '/public/thoughts.html');
   });
 
+  app.get('/genesis', function(req, res){
+      res.sendfile(__dirname + '/public/genesis.html');
+    });
+
+
+
 
 
 
