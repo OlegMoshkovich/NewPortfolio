@@ -120,6 +120,13 @@ section{
   margin: 8rem auto;
   position: relative;
 }
+
+.img-main-emilie{
+  display: block;
+  width: 40%;
+  margin: 8rem auto;
+  position: relative;
+}
 .img-main-gs{
   display: block;
   width: 60%;
@@ -357,12 +364,12 @@ section{
     cursor: pointer; }
 
 
-.navigation__button-10 {
+.navigation__button-emilie {
 font-size: 1.5rem;
 color: #fff;
 position: fixed;
 top: 4.9rem;
-right: 10rem;
+right: 12.5rem;
 background-color: #0029FF;
 z-index: 1000;
 border-radius: 50%;
@@ -377,7 +384,7 @@ font-size: 1.5rem;
 color: #fff;
 position: fixed;
 top: 4.9rem;
-right: 13rem;
+right: 15rem;
 background-color: #0029FF;
 z-index: 1000;
 border-radius: 50%;
@@ -392,7 +399,7 @@ font-size: 1.5rem;
 color: #fff;
 position: fixed;
 top: 7rem;
-right: 15rem;
+right: 17rem;
 background-color: #0029FF;
 z-index: 1000;
 border-radius: 50%;
@@ -401,6 +408,21 @@ width: 1.5rem;
 -webkit-touch-callout: none;
 user-select: none;
 text-align: center; }
+
+.navigation__button-10 {
+  font-size: 1.5rem;
+  color: #fff;
+  position: fixed;
+  top: 4.9rem;
+  right: 10rem;
+  background-color: #0029FF;
+  z-index: 1000;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  -webkit-touch-callout: none;
+  user-select: none;
+  text-align: center; }
 
 .navigation__button-instagram {
 font-size: 1.5rem;
