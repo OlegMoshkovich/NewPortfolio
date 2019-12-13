@@ -101,10 +101,6 @@ section{
   height:100%;
   /* width:100%; */
 }
-.img-main-box_emilie{
-  height:120%;
-  /* width:100%; */
-}
 .img-main-box-ribbon{
   text-align:center;
   display:inline-block;
@@ -127,8 +123,8 @@ section{
 
 .img-main-emilie{
   display: block;
-  width: 40%;
-  margin: 8rem auto ;
+  width: 35%;
+  margin: 8rem auto;
   position: relative;
 }
 .img-main-gs{
@@ -487,6 +483,21 @@ width: 1.5rem;
 -webkit-touch-callout: none;
 user-select: none;
 text-align: center; }
+
+.navigation__button-gitlab {
+  font-size: 1.5rem;
+  color: #fff;
+  position: fixed;
+  bottom: 9rem;
+  left: 3rem;
+  background-color: blue;
+  z-index: 1000;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  -webkit-touch-callout: none;
+  user-select: none;
+  text-align: center; }
 
 .navigation__button-linkedin {
 font-size: 1.5rem;
